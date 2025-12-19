@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="my">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 5.3: Polymorphism</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">Java Code Camp</div>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -27,17 +32,23 @@
 
         <section id="lesson-content" class="container">
             <h2>၁။ Polymorphism ဆိုသည်မှာ ဘာလဲ?</h2>
-            <p>Polymorphism သည် ဂရိစကားလုံးဖြစ်ပြီး "ပုံသဏ္ဌာန်များစွာ" ဟု အဓိပ္ပာယ်ရသည်။ OOP တွင်မူ Action တစ်ခုတည်းကို မတူညီသော ပုံစံများဖြင့် လုပ်ဆောင်နိုင်စွမ်းကို ဆိုလိုသည်။ ၎င်းကို အမျိုးအစား နှစ်မျိုး ခွဲခြားနိုင်သည်။</p>
+            <p>Polymorphism သည် ဂရိစကားလုံးဖြစ်ပြီး "ပုံသဏ္ဌာန်များစွာ" ဟု အဓိပ္ပာယ်ရသည်။ OOP တွင်မူ Action တစ်ခုတည်းကို
+                မတူညီသော ပုံစံများဖြင့် လုပ်ဆောင်နိုင်စွမ်းကို ဆိုလိုသည်။ ၎င်းကို အမျိုးအစား နှစ်မျိုး ခွဲခြားနိုင်သည်။
+            </p>
 
-            
+
 
             <h2>၂။ Compile-time Polymorphism (Static Binding)</h2>
-            <p>၎င်းကို **Method Overloading** ဟုလည်း ခေါ်သည်။ Program ကို Compile လုပ်နေစဉ်အတွင်း မည်သည့် Method ကို ခေါ်ယူမည်ကို ဆုံးဖြတ်ခြင်း ဖြစ်သည်။ (Module 4 တွင် ရှင်းပြခဲ့သည့်အတိုင်း Parameter မတူညီသော နာမည်တူ Method များ ဖြစ်သည်)။</p>
+            <p>၎င်းကို **Method Overloading** ဟုလည်း ခေါ်သည်။ Program ကို Compile လုပ်နေစဉ်အတွင်း မည်သည့် Method ကို
+                ခေါ်ယူမည်ကို ဆုံးဖြတ်ခြင်း ဖြစ်သည်။ (Module 4 တွင် ရှင်းပြခဲ့သည့်အတိုင်း Parameter မတူညီသော နာမည်တူ
+                Method များ ဖြစ်သည်)။</p>
 
             <h2>၃။ Runtime Polymorphism (Dynamic Binding)</h2>
-            <p>၎င်းကို **Method Overriding** ဟု ခေါ်သည်။ အမွေဆက်ခံထားသော (Inheritance) Class များတွင် မိဘ Class ရှိ Method ကို သားသမီး Class က မိမိစိတ်ကြိုက် ပြန်လည်ပြင်ဆင် ရေးသားခြင်း ဖြစ်သည်။ မည်သည့် Method အလုပ်လုပ်မည်ကို Program Run နေသည့်အချိန်မှသာ ဆုံးဖြတ်သည်။</p>
+            <p>၎င်းကို **Method Overriding** ဟု ခေါ်သည်။ အမွေဆက်ခံထားသော (Inheritance) Class များတွင် မိဘ Class ရှိ
+                Method ကို သားသမီး Class က မိမိစိတ်ကြိုက် ပြန်လည်ပြင်ဆင် ရေးသားခြင်း ဖြစ်သည်။ မည်သည့် Method
+                အလုပ်လုပ်မည်ကို Program Run နေသည့်အချိန်မှသာ ဆုံးဖြတ်သည်။</p>
 
-            
+
 
             <div class="code-example">
                 <h4>Method Overriding ဥပမာ</h4>
@@ -84,12 +95,15 @@ public class Main {
 
             <h2>၄။ အဘယ်ကြောင့် Polymorphism ကို သုံးရသနည်း?</h2>
             <ul>
-                <li>**Flexibility:** Object တစ်ခုတည်းက အခြေအနေပေါ်မူတည်ပြီး ပုံစံအမျိုးမျိုး ပြောင်းလဲလုပ်ဆောင်နိုင်သည်။</li>
-                <li>**Clean Code:** Method နာမည် တစ်ခုတည်းကိုသာ မှတ်သားထားရန် လိုအပ်ပြီး အလုပ်လုပ်ပုံကို Object က ဆုံးဖြတ်ပေးသည်။</li>
+                <li>**Flexibility:** Object တစ်ခုတည်းက အခြေအနေပေါ်မူတည်ပြီး ပုံစံအမျိုးမျိုး ပြောင်းလဲလုပ်ဆောင်နိုင်သည်။
+                </li>
+                <li>**Clean Code:** Method နာမည် တစ်ခုတည်းကိုသာ မှတ်သားထားရန် လိုအပ်ပြီး အလုပ်လုပ်ပုံကို Object က
+                    ဆုံးဖြတ်ပေးသည်။</li>
             </ul>
 
             <blockquote class="tip">
-                **@Override** ဆိုသည်မှာ Annotation တစ်ခု ဖြစ်သည်။ ၎င်းသည် မိဘဆီမှ Method ကို ပြန်ပြင်ရေးနေခြင်းဖြစ်ကြောင်း Compiler ကို အသိပေးခြင်းဖြစ်ပြီး မှားယွင်းမှုများကို ကာကွယ်ပေးသည်။
+                **@Override** ဆိုသည်မှာ Annotation တစ်ခု ဖြစ်သည်။ ၎င်းသည် မိဘဆီမှ Method ကို
+                ပြန်ပြင်ရေးနေခြင်းဖြစ်ကြောင်း Compiler ကို အသိပေးခြင်းဖြစ်ပြီး မှားယွင်းမှုများကို ကာကွယ်ပေးသည်။
             </blockquote>
         </section>
     </main>
@@ -100,4 +114,5 @@ public class Main {
         <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

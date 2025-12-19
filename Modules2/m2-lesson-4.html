@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="my">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 2.4: Nested Loops</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">Java Code Camp</div>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -27,13 +32,16 @@
 
         <section id="lesson-content" class="container">
             <h2>၁။ Nested Loop ဆိုသည်မှာ ဘာလဲ?</h2>
-            <p>Nested Loop ဆိုသည်မှာ **Loop တစ်ခု၏ အတွင်း၌ နောက်ထပ် Loop တစ်ခု ထပ်မံ ထည့်သွင်း အသုံးပြုခြင်း** ဖြစ်သည်။ အပြင်ဘက် Loop (Outer Loop) တစ်ကြိမ် လည်ပတ်တိုင်း အတွင်းဘက် Loop (Inner Loop) သည် ၎င်း၏ သတ်မှတ်ထားသော အကြိမ်ရေ ပြည့်သည်အထိ အလုပ်လုပ်သည်။</p>
+            <p>Nested Loop ဆိုသည်မှာ **Loop တစ်ခု၏ အတွင်း၌ နောက်ထပ် Loop တစ်ခု ထပ်မံ ထည့်သွင်း အသုံးပြုခြင်း** ဖြစ်သည်။
+                အပြင်ဘက် Loop (Outer Loop) တစ်ကြိမ် လည်ပတ်တိုင်း အတွင်းဘက် Loop (Inner Loop) သည် ၎င်း၏ သတ်မှတ်ထားသော
+                အကြိမ်ရေ ပြည့်သည်အထိ အလုပ်လုပ်သည်။</p>
 
-            
+
 
             <h2>၂။ အလုပ်လုပ်ပုံ အဆင့်ဆင့်</h2>
-            <p>အပြင်ဘက် Loop တစ်ခါ လည်ပတ်လျှင် အတွင်းဘက် Loop က လိုအပ်သလောက် အကြိမ်ကြိမ် လည်ပတ်သည်။ အတွင်း Loop ပြီးမှသာ အပြင် Loop က ဒုတိယအကြိမ်သို့ ကူးပြောင်းသည်။</p>
-            
+            <p>အပြင်ဘက် Loop တစ်ခါ လည်ပတ်လျှင် အတွင်းဘက် Loop က လိုအပ်သလောက် အကြိမ်ကြိမ် လည်ပတ်သည်။ အတွင်း Loop ပြီးမှသာ
+                အပြင် Loop က ဒုတိယအကြိမ်သို့ ကူးပြောင်းသည်။</p>
+
             <div class="code-example">
                 <h4>ဥပမာ ၁- ရိုးရှင်းသော Coordinate ပုံစံ</h4>
                 <pre><code>
@@ -54,10 +62,10 @@ R1C1 R1C2 R1C3
 R2C1 R2C2 R2C3 
                 </pre>
             </div>
-            
+
             <h2>၃။ လက်တွေ့ အသုံးချပုံ (Pattern Drawing)</h2>
             <p>Nested Loop များကို အသုံးပြုပြီး ကြယ်ပွင့်ပုံစံများ (Stars patterns) ကို အလွယ်တကူ ရေးသားနိုင်သည်။</p>
-            
+
             <div class="code-example">
                 <h4>ဥပမာ ၂- ကြယ်ပွင့် တြိဂံပုံစံ ရေးဆွဲခြင်း</h4>
                 <pre><code>
@@ -76,7 +84,8 @@ for (int i = 1; i <= rows; i++) {
             </div>
 
             <blockquote class="tip">
-                **သတိထားရန်:** Nested Loops များသည် များပြားလာပါက (ဥပမာ- ၃ ထပ်၊ ၄ ထပ်) Program ၏ အလုပ်လုပ်နှုန်း (Performance) ကို သိသိသာသာ နှေးကွေးစေနိုင်ပါသည်။ ထို့ကြောင့် လိုအပ်မှသာ အသုံးပြုသင့်သည်။
+                **သတိထားရန်:** Nested Loops များသည် များပြားလာပါက (ဥပမာ- ၃ ထပ်၊ ၄ ထပ်) Program ၏ အလုပ်လုပ်နှုန်း
+                (Performance) ကို သိသိသာသာ နှေးကွေးစေနိုင်ပါသည်။ ထို့ကြောင့် လိုအပ်မှသာ အသုံးပြုသင့်သည်။
             </blockquote>
 
         </section>
@@ -88,4 +97,5 @@ for (int i = 1; i <= rows; i++) {
         <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

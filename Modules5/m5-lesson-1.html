@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="my">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 5.1: Class and Object</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">Java Code Camp</div>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -27,12 +32,15 @@
 
         <section id="lesson-content" class="container">
             <h2>၁။ Class ဆိုသည်မှာ ဘာလဲ?</h2>
-            <p>Class ဆိုသည်မှာ Object တစ်ခု ဖန်တီးရန်အတွက် အသုံးပြုသော **Blueprint (ပုံစံကြမ်း)** ဖြစ်သည်။ ၎င်းတွင် Object တစ်ခု၌ ရှိရမည့် အချက်အလက် (Fields/Attributes) နှင့် လုပ်ဆောင်ချက် (Methods/Behaviors) များကို သတ်မှတ်ပေးထားသည်။</p>
+            <p>Class ဆိုသည်မှာ Object တစ်ခု ဖန်တီးရန်အတွက် အသုံးပြုသော **Blueprint (ပုံစံကြမ်း)** ဖြစ်သည်။ ၎င်းတွင်
+                Object တစ်ခု၌ ရှိရမည့် အချက်အလက် (Fields/Attributes) နှင့် လုပ်ဆောင်ချက် (Methods/Behaviors) များကို
+                သတ်မှတ်ပေးထားသည်။</p>
 
-            
+
 
             <h2>၂။ Object ဆိုသည်မှာ ဘာလဲ?</h2>
-            <p>Object ဆိုသည်မှာ Class မှတစ်ဆင့် လက်တွေ့ ဖန်တီးလိုက်သော **Instance (အစစ်အမှန် အရာဝတ္ထု)** ဖြစ်သည်။ Class တစ်ခုတည်းမှနေ၍ Object ပေါင်းများစွာကို ဖန်တီးနိုင်သည်။</p>
+            <p>Object ဆိုသည်မှာ Class မှတစ်ဆင့် လက်တွေ့ ဖန်တီးလိုက်သော **Instance (အစစ်အမှန် အရာဝတ္ထု)** ဖြစ်သည်။ Class
+                တစ်ခုတည်းမှနေ၍ Object ပေါင်းများစွာကို ဖန်တီးနိုင်သည်။</p>
 
             <div class="code-example">
                 <h4>Class နှင့် Object ဥပမာ (Car Class)</h4>
@@ -71,18 +79,31 @@ Toyota ကားလေး မောင်းနေပါပြီ။
             <div class="type-table">
                 <table>
                     <thead>
-                        <tr><th>Class (Blueprint)</th><th>Object (Instance)</th></tr>
+                        <tr>
+                            <th>Class (Blueprint)</th>
+                            <th>Object (Instance)</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr><td>အယူအဆ (Logical Entity) သာဖြစ်သည်။</td><td>လက်တွေ့ရှိသော (Physical Entity) ဖြစ်သည်။</td></tr>
-                        <tr><td>Memory နေရာယူမှု မရှိပါ။</td><td>ဖန်တီးလိုက်သောအခါ Memory နေရာယူသည်။</td></tr>
-                        <tr><td>တစ်ကြိမ်သာ ကြေညာရသည်။</td><td>လိုအပ်သလောက် အကြိမ်ကြိမ် ဖန်တီးနိုင်သည်။</td></tr>
+                        <tr>
+                            <td>အယူအဆ (Logical Entity) သာဖြစ်သည်။</td>
+                            <td>လက်တွေ့ရှိသော (Physical Entity) ဖြစ်သည်။</td>
+                        </tr>
+                        <tr>
+                            <td>Memory နေရာယူမှု မရှိပါ။</td>
+                            <td>ဖန်တီးလိုက်သောအခါ Memory နေရာယူသည်။</td>
+                        </tr>
+                        <tr>
+                            <td>တစ်ကြိမ်သာ ကြေညာရသည်။</td>
+                            <td>လိုအပ်သလောက် အကြိမ်ကြိမ် ဖန်တီးနိုင်သည်။</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
 
             <blockquote class="tip">
-                **မှတ်သားရန်:** Java တွင် <code>new</code> keyword ကို တွေ့လျှင် Object အသစ်တစ်ခုကို Memory (Heap) ပေါ်တွင် နေရာချ (Allocate) လိုက်ပြီဟု မှတ်သားနိုင်ပါသည်။
+                **မှတ်သားရန်:** Java တွင် <code>new</code> keyword ကို တွေ့လျှင် Object အသစ်တစ်ခုကို Memory (Heap)
+                ပေါ်တွင် နေရာချ (Allocate) လိုက်ပြီဟု မှတ်သားနိုင်ပါသည်။
             </blockquote>
         </section>
     </main>
@@ -93,4 +114,5 @@ Toyota ကားလေး မောင်းနေပါပြီ။
         <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

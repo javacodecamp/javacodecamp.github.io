@@ -20,7 +20,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
 });
 
 // Add a "scroll-to-top" button if the user scrolls down
-window.onscroll = function() {
+window.onscroll = function () {
     scrollFunction();
 };
 

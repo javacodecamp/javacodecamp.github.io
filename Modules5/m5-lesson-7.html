@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="my">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 5.7: Interface vs Abstract Class</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">Java Code Camp</div>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -27,7 +32,9 @@
 
         <section id="lesson-content" class="container">
             <h2>၁။ Interface ဆိုသည်မှာ ဘာလဲ?</h2>
-            <p>Interface ဆိုသည်မှာ Class တစ်ခုက ဘာတွေလုပ်နိုင်ရမည်လဲဆိုသည့် **"စာချုပ် (Contract)"** တစ်ခုကဲ့သို့ ဖြစ်သည်။ ၎င်းတွင် အကောင်အထည်ဖော်ရမည့် လုပ်ဆောင်ချက် (Method Signatures) များသာ ပါဝင်ပြီး၊ ၎င်းကို အသုံးပြုမည့် Class (Implementing Class) က အလုပ်လုပ်ပုံအသေးစိတ်ကို ရေးသားရမည်ဖြစ်သည်။</p>
+            <p>Interface ဆိုသည်မှာ Class တစ်ခုက ဘာတွေလုပ်နိုင်ရမည်လဲဆိုသည့် **"စာချုပ် (Contract)"** တစ်ခုကဲ့သို့
+                ဖြစ်သည်။ ၎င်းတွင် အကောင်အထည်ဖော်ရမည့် လုပ်ဆောင်ချက် (Method Signatures) များသာ ပါဝင်ပြီး၊ ၎င်းကို
+                အသုံးပြုမည့် Class (Implementing Class) က အလုပ်လုပ်ပုံအသေးစိတ်ကို ရေးသားရမည်ဖြစ်သည်။</p>
 
             <div class="code-example">
                 <h4>Interface ဥပမာ</h4>
@@ -47,7 +54,7 @@ class Dog implements Animal {
             <h2>၂။ Interface နှင့် Abstract Class ၏ ကွာခြားချက်များ</h2>
             <p>အဓိက ကွာခြားချက်များကို အောက်ပါဇယားတွင် ကြည့်ရှုနိုင်ပါသည်-</p>
 
-            
+
 
             <div class="type-table">
                 <table>
@@ -84,9 +91,10 @@ class Dog implements Animal {
             </div>
 
             <h2>၃။ Multiple Inheritance (အမွေဆက်ခံမှု အများအပြား)</h2>
-            <p>Java တွင် Class တစ်ခုသည် မိဘ Class တစ်ခုထက်ပို၍ အမွေဆက်ခံခွင့်မရှိသော်လည်း၊ Interface များကိုမူ အကန့်အသတ်မရှိ (Multiple Interfaces) အသုံးပြုခွင့်ပေးထားသည်။</p>
+            <p>Java တွင် Class တစ်ခုသည် မိဘ Class တစ်ခုထက်ပို၍ အမွေဆက်ခံခွင့်မရှိသော်လည်း၊ Interface များကိုမူ
+                အကန့်အသတ်မရှိ (Multiple Interfaces) အသုံးပြုခွင့်ပေးထားသည်။</p>
 
-            
+
 
             <div class="code-example">
                 <h4>Multiple Interfaces ဥပမာ</h4>
@@ -112,8 +120,10 @@ public class Main {
             <blockquote class="tip">
                 **မည်သည့်အချိန်တွင် မည်သည်ကို သုံးရမည်နည်း?**
                 <ul>
-                    <li>အကယ်၍ Class အချင်းချင်း ဆက်စပ်မှုရှိပြီး (is-a relationship) Code အချို့ကို ဝေမျှသုံးစွဲချင်လျှင် **Abstract Class** ကို သုံးပါ။</li>
-                    <li>အကယ်၍ မတူညီသော Class များကြားတွင် တူညီသော စွမ်းဆောင်ရည် (Role/Capability) တစ်ခုကို သတ်မှတ်ချင်လျှင် **Interface** ကို သုံးပါ။</li>
+                    <li>အကယ်၍ Class အချင်းချင်း ဆက်စပ်မှုရှိပြီး (is-a relationship) Code အချို့ကို
+                        ဝေမျှသုံးစွဲချင်လျှင် **Abstract Class** ကို သုံးပါ။</li>
+                    <li>အကယ်၍ မတူညီသော Class များကြားတွင် တူညီသော စွမ်းဆောင်ရည် (Role/Capability) တစ်ခုကို
+                        သတ်မှတ်ချင်လျှင် **Interface** ကို သုံးပါ။</li>
                 </ul>
             </blockquote>
         </section>
@@ -125,4 +135,5 @@ public class Main {
         <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

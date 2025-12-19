@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="my">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 1.3: Type Casting & Operators</title>
-    <link rel="stylesheet" href="../style.css"> </head>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
 <body>
     <header>
-        <div class="logo">Java Code Camp</div>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -26,11 +32,13 @@
 
         <section id="lesson-content" class="container">
             <h2>၁။ Type Casting (Data အမျိုးအစား ပြောင်းလဲခြင်း)</h2>
-            <p>Type Casting ဆိုသည်မှာ Data Type တစ်ခုကို နောက်ထပ် Data Type တစ်ခုသို့ ပြောင်းလဲခြင်းဖြစ်သည်။ ၎င်းတွင် အဓိကအားဖြင့် အမျိုးအစား နှစ်မျိုးရှိသည်။</p>
-            
+            <p>Type Casting ဆိုသည်မှာ Data Type တစ်ခုကို နောက်ထပ် Data Type တစ်ခုသို့ ပြောင်းလဲခြင်းဖြစ်သည်။ ၎င်းတွင်
+                အဓိကအားဖြင့် အမျိုးအစား နှစ်မျိုးရှိသည်။</p>
+
             <h3>A. Widening/Implicit Casting (အလိုအလျောက် ပြောင်းလဲခြင်း)</h3>
-            <p>အရွယ်အစားသေးငယ်သော Type မှ အရွယ်အစား ပိုကြီးသော Type သို့ ပြောင်းလဲခြင်းဖြစ်သည်။ (ဥပမာ: <code>int</code> မှ <code>double</code>) ဤသည်မှာ Data ပျောက်ဆုံးမှု မရှိသောကြောင့် Java က အလိုအလျောက် ခွင့်ပြုသည်။</p>
-            
+            <p>အရွယ်အစားသေးငယ်သော Type မှ အရွယ်အစား ပိုကြီးသော Type သို့ ပြောင်းလဲခြင်းဖြစ်သည်။ (ဥပမာ: <code>int</code>
+                မှ <code>double</code>) ဤသည်မှာ Data ပျောက်ဆုံးမှု မရှိသောကြောင့် Java က အလိုအလျောက် ခွင့်ပြုသည်။</p>
+
             <div class="code-example">
                 <h4>Widening Casting ဥပမာ</h4>
                 <pre><code>
@@ -45,10 +53,12 @@ System.out.println(myDouble);
 9.0
                 </pre>
             </div>
-            
+
             <h3>B. Narrowing/Explicit Casting (အတင်းအဓမ္မ ပြောင်းလဲခြင်း)</h3>
-            <p>အရွယ်အစားကြီးသော Type မှ သေးငယ်သော Type သို့ ပြောင်းလဲခြင်းဖြစ်သည်။ (ဥပမာ: <code>double</code> မှ <code>int</code>) ဤသည်မှာ Data ပျောက်ဆုံးနိုင်သောကြောင့် (ဒသမကိန်းများ ပျောက်သွားနိုင်သည်)၊ **ကွင်းစကွင်းပိတ်** ထဲတွင် Type အသစ်ကို ထည့်၍ Manual လုပ်ပေးရသည်။</p>
-            
+            <p>အရွယ်အစားကြီးသော Type မှ သေးငယ်သော Type သို့ ပြောင်းလဲခြင်းဖြစ်သည်။ (ဥပမာ: <code>double</code> မှ
+                <code>int</code>) ဤသည်မှာ Data ပျောက်ဆုံးနိုင်သောကြောင့် (ဒသမကိန်းများ ပျောက်သွားနိုင်သည်)၊
+                **ကွင်းစကွင်းပိတ်** ထဲတွင် Type အသစ်ကို ထည့်၍ Manual လုပ်ပေးရသည်။</p>
+
             <div class="code-example">
                 <h4>Narrowing Casting ဥပမာ</h4>
                 <pre><code>
@@ -65,7 +75,8 @@ System.out.println(myInt); // ဒသမကိန်း ပျောက်သွ�
             </div>
 
             <h2>၂။ Operators များ (တွက်ချက်မှု သင်္ကေတများ)</h2>
-            <p>Operator ဆိုသည်မှာ Variable များ သို့မဟုတ် တန်ဖိုးများပေါ်တွင် တွက်ချက်မှု (Operation) များ ပြုလုပ်ရန် အသုံးပြုသော အထူးသင်္ကေတများ ဖြစ်သည်။</p>
+            <p>Operator ဆိုသည်မှာ Variable များ သို့မဟုတ် တန်ဖိုးများပေါ်တွင် တွက်ချက်မှု (Operation) များ ပြုလုပ်ရန်
+                အသုံးပြုသော အထူးသင်္ကေတများ ဖြစ်သည်။</p>
 
             <h3>A. Arithmetic Operators (ဂဏန်းတွက်ချက်မှု)</h3>
             <p>သာမန် ဂဏန်းပေါင်း၊ နှုတ်၊ မြှောက်၊ စားခြင်းတို့အတွက် အသုံးပြုသည်။</p>
@@ -85,7 +96,8 @@ System.out.println("စားကြွင်း: " + (a % b)); // 10 ကို 3
             </div>
 
             <h3>B. Comparison/Relational Operators (နှိုင်းယှဉ်မှု)</h3>
-            <p>တန်ဖိုးနှစ်ခုကို နှိုင်းယှဉ်ပြီး ရလဒ်ကို <code>boolean</code> (True သို့မဟုတ် False) အဖြစ် ပြန်ပေးသည်။</p>
+            <p>တန်ဖိုးနှစ်ခုကို နှိုင်းယှဉ်ပြီး ရလဒ်ကို <code>boolean</code> (True သို့မဟုတ် False) အဖြစ် ပြန်ပေးသည်။
+            </p>
             <div class="code-example">
                 <h4>Code</h4>
                 <pre><code>
@@ -104,7 +116,8 @@ System.out.println("သေးပါသလား (<): " + (x < y)); // True
             </div>
 
             <h3>C. Logical Operators (ယုတ္တိဗေဒ)</h3>
-            <p>Boolean တန်ဖိုးများ (True/False) နှစ်ခု သို့မဟုတ် နှစ်ခုထက်ပိုသော အခြေအနေများကို ပေါင်းစပ်ရာတွင် အသုံးပြုသည်။</p>
+            <p>Boolean တန်ဖိုးများ (True/False) နှစ်ခု သို့မဟုတ် နှစ်ခုထက်ပိုသော အခြေအနေများကို ပေါင်းစပ်ရာတွင်
+                အသုံးပြုသည်။</p>
             <div class="code-example">
                 <h4>Code</h4>
                 <pre><code>
@@ -127,17 +140,20 @@ OR (||): true
 NOT (!): true
                 </pre>
             </div>
-            
+
             <blockquote class="tip">
-                <code>Ternary Operator (? :)</code> သည် <code>if-else</code> statement ကို တိုတိုလေး ရေးသားနိုင်စေသည်။ (ဥပမာ: <code>String result = (score > 50) ? "Pass" : "Fail";</code>)
+                <code>Ternary Operator (? :)</code> သည် <code>if-else</code> statement ကို တိုတိုလေး ရေးသားနိုင်စေသည်။
+                (ဥပမာ: <code>String result = (score > 50) ? "Pass" : "Fail";</code>)
             </blockquote>
 
         </section>
     </main>
 
     <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
-    <script src="../script.js"></script> <footer>
+    <script src="../script.js"></script>
+    <footer>
         <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

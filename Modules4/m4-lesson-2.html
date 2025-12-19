@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="my">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 4.2: Overloading, Varargs & Pass-by-value</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">Java Code Camp</div>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -27,9 +32,10 @@
 
         <section id="lesson-content" class="container">
             <h2>၁။ Method Overloading ဆိုသည်မှာ ဘာလဲ?</h2>
-            <p>Class တစ်ခုတည်းအတွင်း၌ **Method Name အတူတူ** ကို အသုံးပြုသော်လည်း ၎င်းတို့လက်ခံသော **Parameters (Arguments)** များ မတူညီအောင် ဖန်တီးခြင်းကို ခေါ်သည်။ ၎င်းသည် ပရိုဂရမ်ကို ပိုမိုဖတ်ရလွယ်ကူစေသည်။</p>
+            <p>Class တစ်ခုတည်းအတွင်း၌ **Method Name အတူတူ** ကို အသုံးပြုသော်လည်း ၎င်းတို့လက်ခံသော **Parameters
+                (Arguments)** များ မတူညီအောင် ဖန်တီးခြင်းကို ခေါ်သည်။ ၎င်းသည် ပရိုဂရမ်ကို ပိုမိုဖတ်ရလွယ်ကူစေသည်။</p>
 
-            
+
 
             <div class="code-example">
                 <h4>Method Overloading ဥပမာ</h4>
@@ -59,8 +65,9 @@ Double Sum: 10.0
             </div>
 
             <h2>၂။ Variable Arguments (Varargs)</h2>
-            <p>Method တစ်ခုကို ခေါ်ယူသည့်အခါ Parameter အရေအတွက် မည်မျှလာမည်ကို အတိအကျမသိနိုင်ပါက <code>...</code> (ellipsis) ကို အသုံးပြုနိုင်သည်။</p>
-            
+            <p>Method တစ်ခုကို ခေါ်ယူသည့်အခါ Parameter အရေအတွက် မည်မျှလာမည်ကို အတိအကျမသိနိုင်ပါက <code>...</code>
+                (ellipsis) ကို အသုံးပြုနိုင်သည်။</p>
+
             <div class="code-example">
                 <h4>Varargs ဥပမာ</h4>
                 <pre><code>
@@ -84,9 +91,10 @@ public static void main(String[] args) {
             </div>
 
             <h2>၃။ Pass-by-value သဘောတရား</h2>
-            <p>Java တွင် Method ဆီသို့ Parameter ပေးပို့သည့်အခါ **Value (တန်ဖိုး)** ကိုသာ ကူးယူပေးပို့ခြင်းဖြစ်သည်။ မူရင်း Variable ထဲရှိ တန်ဖိုးသည် Method အတွင်း ပြောင်းလဲမှုကြောင့် လိုက်ပါပြောင်းလဲခြင်း မရှိပါ။</p>
+            <p>Java တွင် Method ဆီသို့ Parameter ပေးပို့သည့်အခါ **Value (တန်ဖိုး)** ကိုသာ ကူးယူပေးပို့ခြင်းဖြစ်သည်။
+                မူရင်း Variable ထဲရှိ တန်ဖိုးသည် Method အတွင်း ပြောင်းလဲမှုကြောင့် လိုက်ပါပြောင်းလဲခြင်း မရှိပါ။</p>
 
-            
+
 
             <div class="code-example">
                 <h4>Pass-by-value ဥပမာ</h4>
@@ -108,7 +116,8 @@ Original Num: 50
             </div>
 
             <blockquote class="tip">
-                **မှတ်ချက်:** Method Overloading လုပ်သည့်အခါ Return Type မတူရုံမျှဖြင့် မရပါ။ Parameter list (အရေအတွက် သို့မဟုတ် အမျိုးအစား) သိသိသာသာ ကွဲပြားရန် လိုအပ်ပါသည်။
+                **မှတ်ချက်:** Method Overloading လုပ်သည့်အခါ Return Type မတူရုံမျှဖြင့် မရပါ။ Parameter list (အရေအတွက်
+                သို့မဟုတ် အမျိုးအစား) သိသိသာသာ ကွဲပြားရန် လိုအပ်ပါသည်။
             </blockquote>
         </section>
     </main>
@@ -119,4 +128,5 @@ Original Num: 50
         <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

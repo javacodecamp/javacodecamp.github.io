@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="my">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 2.3: For, While, Do-While Loops</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">Java Code Camp</div>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -27,17 +32,21 @@
 
         <section id="lesson-content" class="container">
             <h2>၁။ Loop ဆိုသည်မှာ ဘာလဲ?</h2>
-            <p>Loop ဆိုသည်မှာ သတ်မှတ်ထားသော Code Block တစ်ခုကို **Condition (အခြေအနေ)** မမှန်တော့သည်အထိ သို့မဟုတ် သတ်မှတ်ထားသော အကြိမ်ရေ ပြည့်သည်အထိ **ထပ်ခါတလဲလဲ** လုပ်ဆောင်စေရန် အသုံးပြုသော Control Structure ဖြစ်သည်။</p>
+            <p>Loop ဆိုသည်မှာ သတ်မှတ်ထားသော Code Block တစ်ခုကို **Condition (အခြေအနေ)** မမှန်တော့သည်အထိ သို့မဟုတ်
+                သတ်မှတ်ထားသော အကြိမ်ရေ ပြည့်သည်အထိ **ထပ်ခါတလဲလဲ** လုပ်ဆောင်စေရန် အသုံးပြုသော Control Structure ဖြစ်သည်။
+            </p>
 
             <h2>၂။ The `for` Loop</h2>
-            <p>အကြိမ်ရေ **မည်မျှ လည်ပတ်ရမည်** ကို ကြိုတင်သိရှိထားသည့်အခါ <code>for</code> loop ကို အများဆုံး အသုံးပြုသည်။ ၎င်းတွင် အစိတ်အပိုင်း ၃ ခု ပါဝင်သည်။</p>
-            
+            <p>အကြိမ်ရေ **မည်မျှ လည်ပတ်ရမည်** ကို ကြိုတင်သိရှိထားသည့်အခါ <code>for</code> loop ကို အများဆုံး
+                အသုံးပြုသည်။ ၎င်းတွင် အစိတ်အပိုင်း ၃ ခု ပါဝင်သည်။</p>
+
             <ol>
                 <li>**Initialization (စတင်ခြင်း):** Loop စတင်ရာ နေရာ (ဥပမာ: <code>int i = 0;</code>)</li>
                 <li>**Condition (အခြေအနေ):** Loop ဆက်လက် လည်ပတ်ရမည့် အခြေအနေ (ဥပမာ: <code>i < 5;</code>)</li>
-                <li>**Iteration (တိုးခြင်း/လျော့ခြင်း):** Loop တစ်ကြိမ်ပြီးတိုင်း လုပ်ဆောင်မည့် အပြောင်းအလဲ (ဥပမာ: <code>i++</code>)</li>
+                <li>**Iteration (တိုးခြင်း/လျော့ခြင်း):** Loop တစ်ကြိမ်ပြီးတိုင်း လုပ်ဆောင်မည့် အပြောင်းအလဲ (ဥပမာ:
+                    <code>i++</code>)</li>
             </ol>
-            
+
             <div class="code-example">
                 <h4>`for` Loop ဥပမာ (၅ ကြိမ်ရေတွက်ခြင်း)</h4>
                 <pre><code>
@@ -55,10 +64,11 @@ Iteration: 4
 Iteration: 5
                 </pre>
             </div>
-            
+
             <h2>၃။ The `while` Loop</h2>
-            <p>အကြိမ်ရေကို ကြိုတင်မသိဘဲ၊ **အခြေအနေတစ်ခု မှန်နေသမျှကာလပတ်လုံး** ဆက်လက်လည်ပတ်လိုသည့်အခါ <code>while</code> loop ကို အသုံးပြုသည်။ ၎င်းသည် **Loop မစတင်မီ** Condition ကို အရင် စစ်ဆေးသည်။</p>
-            
+            <p>အကြိမ်ရေကို ကြိုတင်မသိဘဲ၊ **အခြေအနေတစ်ခု မှန်နေသမျှကာလပတ်လုံး** ဆက်လက်လည်ပတ်လိုသည့်အခါ <code>while</code>
+                loop ကို အသုံးပြုသည်။ ၎င်းသည် **Loop မစတင်မီ** Condition ကို အရင် စစ်ဆေးသည်။</p>
+
             <div class="code-example">
                 <h4>`while` Loop ဥပမာ</h4>
                 <pre><code>
@@ -76,10 +86,11 @@ Count: 1
 Count: 2
                 </pre>
             </div>
-            
+
             <h2>၄။ The `do-while` Loop</h2>
-            <p><code>do-while</code> loop သည် **Condition ကို နောက်ဆုံးမှ စစ်ဆေး** သောကြောင့်၊ Loop သည် **အနည်းဆုံး တစ်ကြိမ်** တော့ အမြဲတမ်း အလုပ်လုပ်မည်ဖြစ်သည်။</p>
-            
+            <p><code>do-while</code> loop သည် **Condition ကို နောက်ဆုံးမှ စစ်ဆေး** သောကြောင့်၊ Loop သည် **အနည်းဆုံး
+                တစ်ကြိမ်** တော့ အမြဲတမ်း အလုပ်လုပ်မည်ဖြစ်သည်။</p>
+
             <div class="code-example">
                 <h4>`do-while` Loop ဥပမာ</h4>
                 <pre><code>
@@ -98,7 +109,9 @@ This runs once.
             </div>
 
             <blockquote class="tip">
-                **Infinite Loop (အဆုံးမဲ့ Loop)** မဖြစ်စေရန် သတိထားပါ။ <code>while</code> နှင့် <code>do-while</code> တွင် Condition ကို False ဖြစ်သွားစေမည့် Variable (ဥပမာ: <code>count++</code>) ကို Code Block အတွင်း ထည့်သွင်းရန် မမေ့ပါနှင့်။
+                **Infinite Loop (အဆုံးမဲ့ Loop)** မဖြစ်စေရန် သတိထားပါ။ <code>while</code> နှင့် <code>do-while</code>
+                တွင် Condition ကို False ဖြစ်သွားစေမည့် Variable (ဥပမာ: <code>count++</code>) ကို Code Block အတွင်း
+                ထည့်သွင်းရန် မမေ့ပါနှင့်။
             </blockquote>
 
         </section>
@@ -110,4 +123,5 @@ This runs once.
         <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

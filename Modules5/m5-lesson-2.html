@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="my">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 5.2: Inheritance (အမွေဆက်ခံခြင်း)</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">Java Code Camp</div>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -27,14 +32,18 @@
 
         <section id="lesson-content" class="container">
             <h2>၁။ Inheritance ဆိုသည်မှာ ဘာလဲ?</h2>
-            <p>Inheritance ဆိုသည်မှာ Class တစ်ခု (Subclass) က အခြား Class တစ်ခု (Superclass) ၏ Properties (Attributes) နှင့် Methods များကို အမွေဆက်ခံရယူခြင်း ဖြစ်သည်။ ၎င်းကို **"is-a" relationship** ဟုလည်း ခေါ်သည်။ (ဥပမာ- Dog is an Animal)</p>
+            <p>Inheritance ဆိုသည်မှာ Class တစ်ခု (Subclass) က အခြား Class တစ်ခု (Superclass) ၏ Properties (Attributes)
+                နှင့် Methods များကို အမွေဆက်ခံရယူခြင်း ဖြစ်သည်။ ၎င်းကို **"is-a" relationship** ဟုလည်း ခေါ်သည်။ (ဥပမာ-
+                Dog is an Animal)</p>
 
-            [Image showing inheritance hierarchy with a Parent class (Animal) and Child classes (Dog, Cat) inheriting its traits]
+            [Image showing inheritance hierarchy with a Parent class (Animal) and Child classes (Dog, Cat) inheriting
+            its traits]
 
             <h2>၂။ Terminology (အခေါ်အဝေါ်များ)</h2>
             <ul>
                 <li>**Superclass (Parent Class):** အမွေပေးသော Class (အခြေခံ Class)။</li>
-                <li>**Subclass (Child Class):** အမွေဆက်ခံသော Class (တိုးချဲ့ Class)။ ၎င်းသည် Superclass ၏ properties အပြင် ကိုယ်ပိုင် properties များကိုလည်း ထပ်တိုးနိုင်သည်။</li>
+                <li>**Subclass (Child Class):** အမွေဆက်ခံသော Class (တိုးချဲ့ Class)။ ၎င်းသည် Superclass ၏ properties
+                    အပြင် ကိုယ်ပိုင် properties များကိုလည်း ထပ်တိုးနိုင်သည်။</li>
                 <li>**`extends` keyword:** အမွေဆက်ခံရန်အတွက် ဤ keyword ကို အသုံးပြုရသည်။</li>
             </ul>
 
@@ -78,12 +87,14 @@ public class Main {
             <h2>၃။ အဘယ်ကြောင့် Inheritance ကို သုံးရသနည်း?</h2>
             <ol>
                 <li>**Code Reusability:** ရှိပြီးသား Code များကို ပြန်လည်အသုံးပြုနိုင်ခြင်း။</li>
-                <li>**Method Overriding:** မိဘဆီက ရထားတဲ့ လုပ်ဆောင်ချက်ကို သားသမီးက စိတ်ကြိုက် ပြန်ပြင်ချင်တဲ့အခါ သုံးနိုင်ခြင်း (Polymorphism အတွက် အခြေခံ)။</li>
+                <li>**Method Overriding:** မိဘဆီက ရထားတဲ့ လုပ်ဆောင်ချက်ကို သားသမီးက စိတ်ကြိုက် ပြန်ပြင်ချင်တဲ့အခါ
+                    သုံးနိုင်ခြင်း (Polymorphism အတွက် အခြေခံ)။</li>
                 <li>**Hierarchy:** Data များကို စနစ်တကျ အဆင့်ဆင့် စီစဉ်နိုင်ခြင်း။</li>
             </ol>
 
             <blockquote class="tip">
-                **သတိထားရန်:** Java တွင် Class တစ်ခုသည် မိဘ Class **တစ်ခုတည်း** ဆီကသာ တိုက်ရိုက်အမွေဆက်ခံနိုင်သည်။ (Multiple Inheritance of classes is not supported to avoid complexity).
+                **သတိထားရန်:** Java တွင် Class တစ်ခုသည် မိဘ Class **တစ်ခုတည်း** ဆီကသာ တိုက်ရိုက်အမွေဆက်ခံနိုင်သည်။
+                (Multiple Inheritance of classes is not supported to avoid complexity).
             </blockquote>
         </section>
     </main>
@@ -94,4 +105,5 @@ public class Main {
         <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

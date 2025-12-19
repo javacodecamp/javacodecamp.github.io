@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="my">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 1.1: Java Program Structure & Setup</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">Java Code Camp</div>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -27,21 +32,27 @@
 
         <section id="lesson-content" class="container">
             <h2>၁။ Java Development Environment Setup</h2>
-            <p>Java Code များကို ရေးသား၊ Compile (ဘာသာပြန်) နှင့် Run (လည်ပတ်) နိုင်ရန်အတွက် အဓိကအားဖြင့် အောက်ပါ Tools များ လိုအပ်ပါသည်။</p>
+            <p>Java Code များကို ရေးသား၊ Compile (ဘာသာပြန်) နှင့် Run (လည်ပတ်) နိုင်ရန်အတွက် အဓိကအားဖြင့် အောက်ပါ Tools
+                များ လိုအပ်ပါသည်။</p>
             <ul>
-                <li>**JDK (Java Development Kit):** Java Code များကို Compile လုပ်ရန်နှင့် Run ရန် လိုအပ်သော Tool များ၊ Libraries များနှင့် JVM (Java Virtual Machine) တို့ ပါဝင်သည်။</li>
-                <li>**IDE (Integrated Development Environment):** Code များကို ပိုမိုလွယ်ကူလျင်မြန်စွာ ရေးသားနိုင်ရန် ကူညီပေးသော Software များ (ဥပမာ: IntelliJ IDEA, Eclipse, VS Code)။</li>
+                <li>**JDK (Java Development Kit):** Java Code များကို Compile လုပ်ရန်နှင့် Run ရန် လိုအပ်သော Tool များ၊
+                    Libraries များနှင့် JVM (Java Virtual Machine) တို့ ပါဝင်သည်။</li>
+                <li>**IDE (Integrated Development Environment):** Code များကို ပိုမိုလွယ်ကူလျင်မြန်စွာ ရေးသားနိုင်ရန်
+                    ကူညီပေးသော Software များ (ဥပမာ: IntelliJ IDEA, Eclipse, VS Code)။</li>
             </ul>
 
             <h2>၂။ Java Program ၏ အခြေခံဖွဲ့စည်းပုံ</h2>
             <p>ရိုးရှင်းသော Java Program တစ်ခုသည် အောက်ပါ အစိတ်အပိုင်းများဖြင့် ဖွဲ့စည်းထားပါသည်။</p>
-            
+
             <h3>A. Class (အတန်း)</h3>
-            <p>Java ရှိ Code အားလုံးသည် Class တစ်ခု၏ အတွင်း၌ တည်ရှိရမည်။ Class သည် Program အတွက် Blueprint သို့မဟုတ် အိမ်ခေါင်းစဉ်ဖြစ်သည်။</p>
+            <p>Java ရှိ Code အားလုံးသည် Class တစ်ခု၏ အတွင်း၌ တည်ရှိရမည်။ Class သည် Program အတွက် Blueprint သို့မဟုတ်
+                အိမ်ခေါင်းစဉ်ဖြစ်သည်။</p>
 
             <h3>B. main() Method</h3>
-            <p>Program စတင် လည်ပတ်သည့် နေရာ (Starting Point) ဖြစ်သည်။ Java Virtual Machine (JVM) သည် Program ကို စတင်သည့်အခါ ဤနေရာမှ ရှာဖွေစတင်သည်။ ၎င်းကို ပုံသေအားဖြင့် <code>public static void main(String[] args)</code> ဟု ရေးသားရသည်။</p>
-            
+            <p>Program စတင် လည်ပတ်သည့် နေရာ (Starting Point) ဖြစ်သည်။ Java Virtual Machine (JVM) သည် Program ကို
+                စတင်သည့်အခါ ဤနေရာမှ ရှာဖွေစတင်သည်။ ၎င်းကို ပုံသေအားဖြင့်
+                <code>public static void main(String[] args)</code> ဟု ရေးသားရသည်။</p>
+
             <div class="code-example">
                 <h4>Java Code ဥပမာ: "Hello World"</h4>
                 <pre><code>
@@ -61,16 +72,19 @@ public class Hello {
 Hello, Java World!
                 </pre>
             </div>
-            
+
             <h3>၃။ Compilation & Execution Process</h3>
             <ol>
                 <li>**ရေးသားခြင်း:** Developer က Source Code (`Hello.java`) ကို ရေးသားသည်။</li>
-                <li>**Compilation:** JDK အတွင်းရှိ Compiler (javac) ကို အသုံးပြု၍ Source Code ကို **Bytecode** (`Hello.class`) အဖြစ် ပြောင်းလဲသည်။</li>
-                <li>**Execution:** Bytecode ကို JVM (Java Virtual Machine) မှတစ်ဆင့် ကွန်ပျူတာပေါ်တွင် လည်ပတ်စေသည်။ ဤအဆင့်ကြောင့် Java ကို Platform-independent ဖြစ်စေသည်။</li>
+                <li>**Compilation:** JDK အတွင်းရှိ Compiler (javac) ကို အသုံးပြု၍ Source Code ကို **Bytecode**
+                    (`Hello.class`) အဖြစ် ပြောင်းလဲသည်။</li>
+                <li>**Execution:** Bytecode ကို JVM (Java Virtual Machine) မှတစ်ဆင့် ကွန်ပျူတာပေါ်တွင် လည်ပတ်စေသည်။
+                    ဤအဆင့်ကြောင့် Java ကို Platform-independent ဖြစ်စေသည်။</li>
             </ol>
-            
+
             <blockquote class="tip">
-                Java သည် "Write Once, Run Anywhere" (WORA) သဘောတရားကို ကျင့်သုံးပြီး၊ Bytecode ကြောင့် မည်သည့် OS (Windows, Mac, Linux) တွင်မဆို Run နိုင်သည်။
+                Java သည် "Write Once, Run Anywhere" (WORA) သဘောတရားကို ကျင့်သုံးပြီး၊ Bytecode ကြောင့် မည်သည့် OS
+                (Windows, Mac, Linux) တွင်မဆို Run နိုင်သည်။
             </blockquote>
 
         </section>
@@ -82,4 +96,5 @@ Hello, Java World!
         <p>&copy; 2025 90's Coding by ZAW MOE HTWE. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

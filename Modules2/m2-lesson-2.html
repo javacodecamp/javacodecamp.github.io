@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="my">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 2.2: Switch Statement</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">Java Code Camp</div>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -27,13 +32,17 @@
 
         <section id="lesson-content" class="container">
             <h2>၁။ Switch Statement ဆိုသည်မှာ ဘာလဲ?</h2>
-            <p>Variable တစ်ခု၏ တန်ဖိုးပေါ်မူတည်ပြီး ဖြစ်နိုင်ချေရှိသော ရွေးချယ်စရာ (Cases) အများအပြားထဲမှ တစ်ခုကို ရွေးချယ်လုပ်ဆောင်စေချင်သည့်အခါ <code>switch</code> ကို အသုံးပြုသည်။ ၎င်းသည် <code>if-else if</code> များကို အများကြီးသုံးခြင်းထက် ပိုမိုဖတ်ရလွယ်ကူစေသည်။</p>
+            <p>Variable တစ်ခု၏ တန်ဖိုးပေါ်မူတည်ပြီး ဖြစ်နိုင်ချေရှိသော ရွေးချယ်စရာ (Cases) အများအပြားထဲမှ တစ်ခုကို
+                ရွေးချယ်လုပ်ဆောင်စေချင်သည့်အခါ <code>switch</code> ကို အသုံးပြုသည်။ ၎င်းသည် <code>if-else if</code>
+                များကို အများကြီးသုံးခြင်းထက် ပိုမိုဖတ်ရလွယ်ကူစေသည်။</p>
 
-            
+
 
             <h2>၂။ Switch ၏ ဖွဲ့စည်းပုံနှင့် Break Keyword</h2>
-            <p><code>switch</code> ထဲတွင် <code>break</code> keyword သည် အလွန်အရေးကြီးသည်။ Case တစ်ခုနှင့် ကိုက်ညီ၍ အလုပ်လုပ်ပြီးနောက် <code>break</code> မပါလျှင် အောက်က Case များကိုပါ ဆက်လက်လုပ်ဆောင်သွားမည်ဖြစ်သည်။ (ယင်းကို Fall-through ဟုခေါ်သည်)</p>
-            
+            <p><code>switch</code> ထဲတွင် <code>break</code> keyword သည် အလွန်အရေးကြီးသည်။ Case တစ်ခုနှင့် ကိုက်ညီ၍
+                အလုပ်လုပ်ပြီးနောက် <code>break</code> မပါလျှင် အောက်က Case များကိုပါ ဆက်လက်လုပ်ဆောင်သွားမည်ဖြစ်သည်။
+                (ယင်းကို Fall-through ဟုခေါ်သည်)</p>
+
             <div class="code-example">
                 <h4>Switch ဥပမာ (ရက်သတ္တပတ် နေ့ရက်များ)</h4>
                 <pre><code>
@@ -56,10 +65,11 @@ System.out.println("ဒီနေ့က: " + dayName);
 ဒီနေ့က: Wednesday
                 </pre>
             </div>
-            
+
             <h2>၃။ Switch with String (စာသားများဖြင့် အသုံးပြုခြင်း)</h2>
-            <p>Java SE 7 မှစတင်၍ <code>switch</code> ထဲတွင် <code>int</code>, <code>char</code> များသာမက <code>String</code> များကိုပါ စစ်ဆေးနိုင်သည်။</p>
-            
+            <p>Java SE 7 မှစတင်၍ <code>switch</code> ထဲတွင် <code>int</code>, <code>char</code> များသာမက
+                <code>String</code> များကိုပါ စစ်ဆေးနိုင်သည်။</p>
+
             <div class="code-example">
                 <h4>String အသုံးပြုပုံ ဥပမာ</h4>
                 <pre><code>
@@ -82,12 +92,14 @@ switch (level) {
 ပရောဂျက်များ စတင်ရေးသားပါ
                 </pre>
             </div>
-            
+
             <h2>၄။ Default Case</h2>
-            <p>အကယ်၍ ပေးထားသော Case တန်ဖိုးများထဲမှ တစ်ခုနှင့်မျှ မကိုက်ညီပါက <code>default</code> အောက်ရှိ Code Block ကို လုပ်ဆောင်မည်ဖြစ်သည်။ ၎င်းသည် <code>if-else</code> ရှိ <code>else</code> နှင့် အလားသဏ္ဌာန်တူသည်။</p>
+            <p>အကယ်၍ ပေးထားသော Case တန်ဖိုးများထဲမှ တစ်ခုနှင့်မျှ မကိုက်ညီပါက <code>default</code> အောက်ရှိ Code Block
+                ကို လုပ်ဆောင်မည်ဖြစ်သည်။ ၎င်းသည် <code>if-else</code> ရှိ <code>else</code> နှင့် အလားသဏ္ဌာန်တူသည်။</p>
 
             <blockquote class="tip">
-                <code>switch</code> ကို <code>byte, short, char, int, String</code> နှင့် <code>Enums</code> အမျိုးအစားများတွင်သာ သုံးနိုင်သည်။ <code>double</code> သို့မဟုတ် <code>float</code> တို့တွင် သုံး၍မရပါ။
+                <code>switch</code> ကို <code>byte, short, char, int, String</code> နှင့် <code>Enums</code>
+                အမျိုးအစားများတွင်သာ သုံးနိုင်သည်။ <code>double</code> သို့မဟုတ် <code>float</code> တို့တွင် သုံး၍မရပါ။
             </blockquote>
 
         </section>
@@ -99,4 +111,5 @@ switch (level) {
         <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
