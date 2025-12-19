@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.3: For, While, Do-While Loops</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Java Code Camp</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module2">← Module 2: Control Flow သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 2.3: For, While, Do-While Loops (ထပ်ခါတလဲလဲ လုပ်ဆောင်ခြင်း)</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 35 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Loop ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Loop ဆိုသည်မှာ သတ်မှတ်ထားသော Code Block တစ်ခုကို **Condition (အခြေအနေ)** မမှန်တော့သည်အထိ သို့မဟုတ် သတ်မှတ်ထားသော အကြိမ်ရေ ပြည့်သည်အထိ **ထပ်ခါတလဲလဲ** လုပ်ဆောင်စေရန် အသုံးပြုသော Control Structure ဖြစ်သည်။</p>
+
+            <h2>၂။ The `for` Loop</h2>
+            <p>အကြိမ်ရေ **မည်မျှ လည်ပတ်ရမည်** ကို ကြိုတင်သိရှိထားသည့်အခါ <code>for</code> loop ကို အများဆုံး အသုံးပြုသည်။ ၎င်းတွင် အစိတ်အပိုင်း ၃ ခု ပါဝင်သည်။</p>
+            
+            <ol>
+                <li>**Initialization (စတင်ခြင်း):** Loop စတင်ရာ နေရာ (ဥပမာ: <code>int i = 0;</code>)</li>
+                <li>**Condition (အခြေအနေ):** Loop ဆက်လက် လည်ပတ်ရမည့် အခြေအနေ (ဥပမာ: <code>i < 5;</code>)</li>
+                <li>**Iteration (တိုးခြင်း/လျော့ခြင်း):** Loop တစ်ကြိမ်ပြီးတိုင်း လုပ်ဆောင်မည့် အပြောင်းအလဲ (ဥပမာ: <code>i++</code>)</li>
+            </ol>
+            
+            <div class="code-example">
+                <h4>`for` Loop ဥပမာ (၅ ကြိမ်ရေတွက်ခြင်း)</h4>
+                <pre><code>
+// ၁ မှ ၅ အထိ ရေတွက်ခြင်း
+for (int i = 1; i <= 5; i++) { 
+    System.out.println("Iteration: " + i);
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+Iteration: 1
+Iteration: 2
+Iteration: 3
+Iteration: 4
+Iteration: 5
+                </pre>
+            </div>
+            
+            <h2>၃။ The `while` Loop</h2>
+            <p>အကြိမ်ရေကို ကြိုတင်မသိဘဲ၊ **အခြေအနေတစ်ခု မှန်နေသမျှကာလပတ်လုံး** ဆက်လက်လည်ပတ်လိုသည့်အခါ <code>while</code> loop ကို အသုံးပြုသည်။ ၎င်းသည် **Loop မစတင်မီ** Condition ကို အရင် စစ်ဆေးသည်။</p>
+            
+            <div class="code-example">
+                <h4>`while` Loop ဥပမာ</h4>
+                <pre><code>
+int count = 0;
+// count သည် 3 ထက်ငယ်နေသမျှ ဆက်လည်ပတ်မည်
+while (count < 3) { 
+    System.out.println("Count: " + count);
+    count++; // Loop ရပ်တန့်နိုင်ရန် တန်ဖိုးကို တိုးပေးရန် အရေးကြီးသည်
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+Count: 0
+Count: 1
+Count: 2
+                </pre>
+            </div>
+            
+            <h2>၄။ The `do-while` Loop</h2>
+            <p><code>do-while</code> loop သည် **Condition ကို နောက်ဆုံးမှ စစ်ဆေး** သောကြောင့်၊ Loop သည် **အနည်းဆုံး တစ်ကြိမ်** တော့ အမြဲတမ်း အလုပ်လုပ်မည်ဖြစ်သည်။</p>
+            
+            <div class="code-example">
+                <h4>`do-while` Loop ဥပမာ</h4>
+                <pre><code>
+int x = 10;
+
+do {
+    // Condition (x < 5) မှားနေသော်လည်း ဤ Code သည် တစ်ကြိမ် အလုပ်လုပ်မည်။
+    System.out.println("This runs once."); 
+    x++;
+} while (x < 5); // Condition သည် False ဖြစ်သည်
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+This runs once.
+                </pre>
+            </div>
+
+            <blockquote class="tip">
+                **Infinite Loop (အဆုံးမဲ့ Loop)** မဖြစ်စေရန် သတိထားပါ။ <code>while</code> နှင့် <code>do-while</code> တွင် Condition ကို False ဖြစ်သွားစေမည့် Variable (ဥပမာ: <code>count++</code>) ကို Code Block အတွင်း ထည့်သွင်းရန် မမေ့ပါနှင့်။
+            </blockquote>
+
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer>
+        <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

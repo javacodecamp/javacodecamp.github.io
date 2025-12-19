@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.5: break & continue keywords</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Java Code Camp</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module2">← Module 2: Control Flow သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 2.5: Break နှင့် Continue Keywords (Loop ကို ထိန်းချုပ်ခြင်း)</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 10 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Break Keyword ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p><code>break</code> keyword ကို Loop တစ်ခုမှ **ချက်ချင်းထွက်ခွာရန်** အသုံးပြုသည်။ Condition မပြီးဆုံးသေးသော်လည်း <code>break</code> ကို တွေ့ရှိပါက Loop သည် ထိုနေရာတွင်ပင် ရပ်တန့်သွားမည်ဖြစ်သည်။</p>
+
+            
+
+            <div class="code-example">
+                <h4>Break ဥပမာ (ဂဏန်း ၃ ရောက်လျှင် ရပ်ရန်)</h4>
+                <pre><code>
+for (int i = 1; i <= 10; i++) {
+    if (i == 3) {
+        break; // i သည် 3 နှင့်တူလျှင် Loop မှ ထွက်မည်
+    }
+    System.out.println("နံပါတ်: " + i);
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+နံပါတ်: 1
+နံပါတ်: 2
+                </pre>
+            </div>
+            
+            <h2>၂။ Continue Keyword ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p><code>continue</code> keyword သည် Loop ကို ရပ်တန့်ခြင်းမပြုဘဲ **လက်ရှိ အကြိမ် (Current Iteration) ကိုသာ ကျော်သွားရန်** အသုံးပြုသည်။ ၎င်းကို တွေ့ပါက အောက်ရှိ Code များကို မလုပ်ဆောင်ဘဲ နောက်တစ်ကြိမ် (Next Cycle) သို့ ချက်ချင်း ကူးပြောင်းသွားမည်ဖြစ်သည်။</p>
+            
+            <div class="code-example">
+                <h4>Continue ဥပမာ (ဂဏန်း ၃ ကို ကျော်ရန်)</h4>
+                <pre><code>
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) {
+        continue; // i သည် 3 ဖြစ်ပါက အောက်က print ကို မလုပ်ဘဲ i=4 သို့ ကျော်မည်
+    }
+    System.out.println("နံပါတ်: " + i);
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+နံပါတ်: 1
+နံပါတ်: 2
+နံပါတ်: 4
+နံပါတ်: 5
+                </pre>
+            </div>
+            
+            <h3>၃။ နှိုင်းယှဉ်ချက် အကျဉ်းချုပ်</h3>
+            <div class="type-table">
+                <table>
+                    <thead>
+                        <tr><th>Keyword</th><th>အကျိုးသက်ရောက်မှု</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>break</code></td><td>Loop တစ်ခုလုံးကို ရပ်ပစ်ပြီး အပြင်သို့ ထွက်သည်။</td></tr>
+                        <tr><td><code>continue</code></td><td>လက်ရှိအဆင့်ကို ကျော်ပြီး နောက်တစ်ကြိမ် လည်ပတ်ရန် ပြန်သွားသည်။</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <blockquote class="tip">
+                <code>break</code> ကို <code>switch</code> statement များတွင်လည်း Case တစ်ခုချင်းစီကို ခွဲခြားရန် အသုံးပြုကြောင်း မှတ်သားထားပါ။
+            </blockquote>
+
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer>
+        <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

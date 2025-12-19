@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1.3: Type Casting & Operators</title>
+    <link rel="stylesheet" href="../style.css"> </head>
+<body>
+    <header>
+        <div class="logo">Java Code Camp</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module1">← Module 1: Java Basic Concepts သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 1.3: Type Casting (အမျိုးအစား ပြောင်းလဲခြင်း) နှင့် Operators</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 30 မိနစ် | အဆင့်: စတင်သူ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Type Casting (Data အမျိုးအစား ပြောင်းလဲခြင်း)</h2>
+            <p>Type Casting ဆိုသည်မှာ Data Type တစ်ခုကို နောက်ထပ် Data Type တစ်ခုသို့ ပြောင်းလဲခြင်းဖြစ်သည်။ ၎င်းတွင် အဓိကအားဖြင့် အမျိုးအစား နှစ်မျိုးရှိသည်။</p>
+            
+            <h3>A. Widening/Implicit Casting (အလိုအလျောက် ပြောင်းလဲခြင်း)</h3>
+            <p>အရွယ်အစားသေးငယ်သော Type မှ အရွယ်အစား ပိုကြီးသော Type သို့ ပြောင်းလဲခြင်းဖြစ်သည်။ (ဥပမာ: <code>int</code> မှ <code>double</code>) ဤသည်မှာ Data ပျောက်ဆုံးမှု မရှိသောကြောင့် Java က အလိုအလျောက် ခွင့်ပြုသည်။</p>
+            
+            <div class="code-example">
+                <h4>Widening Casting ဥပမာ</h4>
+                <pre><code>
+int myInt = 9;
+double myDouble = myInt; // Automatic casting
+System.out.println(myInt); 
+System.out.println(myDouble);
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+9
+9.0
+                </pre>
+            </div>
+            
+            <h3>B. Narrowing/Explicit Casting (အတင်းအဓမ္မ ပြောင်းလဲခြင်း)</h3>
+            <p>အရွယ်အစားကြီးသော Type မှ သေးငယ်သော Type သို့ ပြောင်းလဲခြင်းဖြစ်သည်။ (ဥပမာ: <code>double</code> မှ <code>int</code>) ဤသည်မှာ Data ပျောက်ဆုံးနိုင်သောကြောင့် (ဒသမကိန်းများ ပျောက်သွားနိုင်သည်)၊ **ကွင်းစကွင်းပိတ်** ထဲတွင် Type အသစ်ကို ထည့်၍ Manual လုပ်ပေးရသည်။</p>
+            
+            <div class="code-example">
+                <h4>Narrowing Casting ဥပမာ</h4>
+                <pre><code>
+double myDouble = 9.99;
+int myInt = (int) myDouble; // Manual casting လိုအပ်သည်။
+System.out.println(myDouble);
+System.out.println(myInt); // ဒသမကိန်း ပျောက်သွားသည်။
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+9.99
+9
+                </pre>
+            </div>
+
+            <h2>၂။ Operators များ (တွက်ချက်မှု သင်္ကေတများ)</h2>
+            <p>Operator ဆိုသည်မှာ Variable များ သို့မဟုတ် တန်ဖိုးများပေါ်တွင် တွက်ချက်မှု (Operation) များ ပြုလုပ်ရန် အသုံးပြုသော အထူးသင်္ကေတများ ဖြစ်သည်။</p>
+
+            <h3>A. Arithmetic Operators (ဂဏန်းတွက်ချက်မှု)</h3>
+            <p>သာမန် ဂဏန်းပေါင်း၊ နှုတ်၊ မြှောက်၊ စားခြင်းတို့အတွက် အသုံးပြုသည်။</p>
+            <div class="code-example">
+                <h4>Code</h4>
+                <pre><code>
+int a = 10;
+int b = 3;
+System.out.println("ပေါင်းခြင်း: " + (a + b)); // 13
+System.out.println("စားကြွင်း: " + (a % b)); // 10 ကို 3 ဖြင့် စားလျှင် ကြွင်းသော 1
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+ပေါင်းခြင်း: 13
+စားကြွင်း: 1
+                </pre>
+            </div>
+
+            <h3>B. Comparison/Relational Operators (နှိုင်းယှဉ်မှု)</h3>
+            <p>တန်ဖိုးနှစ်ခုကို နှိုင်းယှဉ်ပြီး ရလဒ်ကို <code>boolean</code> (True သို့မဟုတ် False) အဖြစ် ပြန်ပေးသည်။</p>
+            <div class="code-example">
+                <h4>Code</h4>
+                <pre><code>
+int x = 5;
+int y = 8;
+System.out.println("တူညီပါသလား (==): " + (x == y)); // False
+System.out.println("မတူညီပါဘူးလား (!=): " + (x != y)); // True
+System.out.println("သေးပါသလား (<): " + (x < y)); // True
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+တူညီပါသလား (==): false
+မတူညီပါဘူးလား (!=): true
+သေးပါသလား (<): true
+                </pre>
+            </div>
+
+            <h3>C. Logical Operators (ယုတ္တိဗေဒ)</h3>
+            <p>Boolean တန်ဖိုးများ (True/False) နှစ်ခု သို့မဟုတ် နှစ်ခုထက်ပိုသော အခြေအနေများကို ပေါင်းစပ်ရာတွင် အသုံးပြုသည်။</p>
+            <div class="code-example">
+                <h4>Code</h4>
+                <pre><code>
+boolean isJavaFun = true;
+boolean isDifficult = false;
+
+// && (AND): နှစ်ခုစလုံး True ဖြစ်မှ True ဖြစ်မည်။
+System.out.println("AND (&&): " + (isJavaFun && isDifficult)); // False
+
+// || (OR): တစ်ခုခု True ဖြစ်ရင်ကို True ဖြစ်မည်။
+System.out.println("OR (||): " + (isJavaFun || isDifficult)); // True
+
+// ! (NOT): တန်ဖိုးကို ပြောင်းပြန်လှန်သည်။
+System.out.println("NOT (!): " + (!isDifficult)); // True
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+AND (&&): false
+OR (||): true
+NOT (!): true
+                </pre>
+            </div>
+            
+            <blockquote class="tip">
+                <code>Ternary Operator (? :)</code> သည် <code>if-else</code> statement ကို တိုတိုလေး ရေးသားနိုင်စေသည်။ (ဥပမာ: <code>String result = (score > 50) ? "Pass" : "Fail";</code>)
+            </blockquote>
+
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script> <footer>
+        <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

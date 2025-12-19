@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4.2: Overloading, Varargs & Pass-by-value</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Java Code Camp</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module4">← Module 4: Methods သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 4.2: Method Overloading, Varargs နှင့် Pass-by-value</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 27 မိနစ် | အဆင့်: အလယ်အလတ်</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Method Overloading ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Class တစ်ခုတည်းအတွင်း၌ **Method Name အတူတူ** ကို အသုံးပြုသော်လည်း ၎င်းတို့လက်ခံသော **Parameters (Arguments)** များ မတူညီအောင် ဖန်တီးခြင်းကို ခေါ်သည်။ ၎င်းသည် ပရိုဂရမ်ကို ပိုမိုဖတ်ရလွယ်ကူစေသည်။</p>
+
+            
+
+            <div class="code-example">
+                <h4>Method Overloading ဥပမာ</h4>
+                <pre><code>
+public class MathUtils {
+    // ကိန်းပြည့်နှစ်ခုပေါင်းသော method
+    static int add(int a, int b) {
+        return a + b;
+    }
+
+    // ဒသမကိန်းနှစ်ခုပေါင်းသော method (နာမည်တူသော်လည်း parameter မတူပါ)
+    static double add(double a, double b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Integer Sum: " + add(5, 10));
+        System.out.println("Double Sum: " + add(5.5, 4.5));
+    }
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+Integer Sum: 15
+Double Sum: 10.0
+                </pre>
+            </div>
+
+            <h2>၂။ Variable Arguments (Varargs)</h2>
+            <p>Method တစ်ခုကို ခေါ်ယူသည့်အခါ Parameter အရေအတွက် မည်မျှလာမည်ကို အတိအကျမသိနိုင်ပါက <code>...</code> (ellipsis) ကို အသုံးပြုနိုင်သည်။</p>
+            
+            <div class="code-example">
+                <h4>Varargs ဥပမာ</h4>
+                <pre><code>
+static void printNumbers(int... nums) {
+    for (int n : nums) {
+        System.out.print(n + " ");
+    }
+    System.out.println();
+}
+
+public static void main(String[] args) {
+    printNumbers(1, 2);
+    printNumbers(10, 20, 30, 40);
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+1 2 
+10 20 30 40 
+                </pre>
+            </div>
+
+            <h2>၃။ Pass-by-value သဘောတရား</h2>
+            <p>Java တွင် Method ဆီသို့ Parameter ပေးပို့သည့်အခါ **Value (တန်ဖိုး)** ကိုသာ ကူးယူပေးပို့ခြင်းဖြစ်သည်။ မူရင်း Variable ထဲရှိ တန်ဖိုးသည် Method အတွင်း ပြောင်းလဲမှုကြောင့် လိုက်ပါပြောင်းလဲခြင်း မရှိပါ။</p>
+
+            
+
+            <div class="code-example">
+                <h4>Pass-by-value ဥပမာ</h4>
+                <pre><code>
+static void changeValue(int x) {
+    x = 100; // x ကို ၁၀၀ ပြောင်းလိုက်သည်
+}
+
+public static void main(String[] args) {
+    int num = 50;
+    changeValue(num); // num ရဲ့ copy (၅၀) ကိုပဲ ပေးလိုက်တာပါ
+    System.out.println("Original Num: " + num);
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+Original Num: 50
+                </pre>
+            </div>
+
+            <blockquote class="tip">
+                **မှတ်ချက်:** Method Overloading လုပ်သည့်အခါ Return Type မတူရုံမျှဖြင့် မရပါ။ Parameter list (အရေအတွက် သို့မဟုတ် အမျိုးအစား) သိသိသာသာ ကွဲပြားရန် လိုအပ်ပါသည်။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer>
+        <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

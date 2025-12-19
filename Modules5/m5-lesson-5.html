@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5.5: Abstraction</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Java Code Camp</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module5">← Module 5: OOP သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 5.5: Abstraction (အနှစ်ထုတ်ခြင်း)</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 20 မိနစ် | အဆင့်: အလယ်အလတ်</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Abstraction ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Abstraction ဆိုသည်မှာ အရာဝတ္ထုတစ်ခု၏ အရေးကြီးသော လက္ခဏာရပ်များကိုသာ ပြသပြီး နောက်ကွယ်မှ ရှုပ်ထွေးသော အလုပ်လုပ်ပုံများကို ဖုံးကွယ်ထားခြင်း ဖြစ်သည်။ Java တွင် Abstraction ကို နည်းလမ်းနှစ်မျိုးဖြင့် ရရှိနိုင်သည်-</p>
+            <ul>
+                <li><strong>Abstract Class</strong> (၀ မှ ၁၀၀ ရာခိုင်နှုန်းအထိ Abstraction ပေးနိုင်သည်)</li>
+                <li><strong>Interface</strong> (၁၀၀ ရာခိုင်နှုန်း အပြည့်အဝ Abstraction ပေးနိုင်သည်)</li>
+            </ul>
+
+            
+
+            <h2>၂။ Abstract Class နှင့် Abstract Method</h2>
+            <p><strong>Abstract Class:</strong> ၎င်းကို Object အဖြစ် တိုက်ရိုက်ဖန်တီး၍ မရပါ။ အခြား Class များက အမွေဆက်ခံရန်အတွက်သာ အသုံးပြုသည်။</p>
+            <p><strong>Abstract Method:</strong> ၎င်းတွင် Body (Code အလုပ်လုပ်ပုံ) မရှိပါ။ အမည်နှင့် ပုံစံကိုသာ သတ်မှတ်ထားပြီး အမွေဆက်ခံသော Subclass များက မဖြစ်မနေ ပြန်လည်ရေးသား (Override) ရမည်ဖြစ်သည်။</p>
+
+            <div class="code-example">
+                <h4>Abstraction ဥပမာ (Shape Class)</h4>
+                <pre><code>
+// Abstract Class တစ်ခု ကြေညာခြင်း
+abstract class Shape {
+    String color;
+
+    // Abstract Method (Body မပါဝင်ပါ)
+    abstract double calculateArea();
+
+    // ပုံမှန် Method လည်း ပါဝင်နိုင်သည်
+    void display() {
+        System.out.println("ဤအရာသည် ပုံသဏ္ဍာန်တစ်ခု ဖြစ်သည်။");
+    }
+}
+
+// Subclass က အမွေဆက်ခံပြီး abstract method ကို ဖြည့်စွက်ခြင်း
+class Circle extends Shape {
+    double radius;
+
+    Circle(double r) { this.radius = r; }
+
+    @Override
+    double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Shape s = new Shape(); // Error: Abstract class ကို object ဆောက်၍မရပါ
+        
+        Circle myCircle = new Circle(5.0);
+        myCircle.display();
+        System.out.println("စက်ဝိုင်း၏ ဧရိယာ: " + myCircle.calculateArea());
+    }
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+ဤအရာသည် ပုံသဏ္ဍာန်တစ်ခု ဖြစ်သည်။
+စက်ဝိုင်း၏ ဧရိယာ: 78.53981633974483
+                </pre>
+            </div>
+
+            <h2>၃။ အဘယ်ကြောင့် Abstraction ကို သုံးရသနည်း?</h2>
+            <ul>
+                <li>**Security:** အသုံးပြုသူကို လိုအပ်တဲ့ အစိတ်အပိုင်းတွေကိုပဲ ပြသပြီး အဓိက Code တွေကို ဖုံးကွယ်ထားနိုင်ခြင်း။</li>
+                <li>**Simplicity:** ရှုပ်ထွေးမှုများကို လျှော့ချပေးပြီး Program ကို ပိုမိုရှင်းလင်းစေခြင်း။</li>
+                <li>**Standardization:** Subclass အားလုံးမှာ တူညီတဲ့ Method နာမည်တွေ ပါဝင်လာအောင် ပုံစံခွက် ချပေးနိုင်ခြင်း။</li>
+            </ul>
+
+            <blockquote class="tip">
+                Abstract Class တစ်ခုထဲမှာ အနည်းဆုံး Abstract Method တစ်ခုပါဝင်နေရင် အဲ့ဒီ Class ကိုလည်း `abstract` လို့ မဖြစ်မနေ ကြေညာပေးရပါတယ်။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer>
+        <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

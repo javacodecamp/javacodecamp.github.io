@@ -1,0 +1,428 @@
+/* Global Reset and Typography */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header and Navigation */
+header {
+    background:  #007bb6;
+    /* Java Theme Color */
+    color: white;
+    padding: 10px 0;
+    border-bottom: 3px solid #f99b1c;
+    /* Accent Color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* ========== Sticky Header အတွက် ထပ်တိုးခြင်း =========== */
+    position: fixed;
+    /* Header ကို Screen ပေါ်မှာ နေရာသတ်မှတ်ထားရန် */
+    top: 0;
+    /* Screen ၏ အပေါ်ဆုံး ထိပ်တွင် ထားရှိရန် */
+    width: 100%;
+    /* Screen အပြည့် ဖြန့်ကျက်ရန် */
+    z-index: 1000;
+    /* အခြား content များ၏ အပေါ်ဆုံးတွင် ရှိနေစေရန် */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* အလှအပအတွက် အရိပ်ထည့်ခြင်း */
+    /* ======================================================== */
+}
+
+/* Content တွေ Header အောက်ကို မဝင်ရအောင် နေရာချန်ပေးခြင်း */
+main {
+    padding-top: 70px;
+    /* ဤတန်ဖိုးကို သင့် Header ၏ အမြင့်ပေါ်မူတည်၍ ညှိနိုင်သည်။ */
+    /* 70px သည် Header အများစုအတွက် လုံလောက်သော အမြင့်ဖြစ်သည် */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    margin-right: 10%;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #f99b1c;
+    /* Highlight on hover/active */
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 80px 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('java_background.jpg');
+    background-size: cover;
+}
+
+#hero h1 {
+    color: #007bb6;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #f99b1c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #e74c3c;
+}
+
+/* Featured Lessons Section */
+#featured-lessons {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.lesson-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.lesson-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    width: 300px;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+}
+
+.lesson-card h3 {
+    color: #007bb6;
+}
+
+.lesson-card .read-more {
+    display: inline-block;
+    color: #f99b1c;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.lesson-card .read-more:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Lessons Page Specific Styles */
+#lessons-header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #eaf6ff;
+    border-bottom: 1px solid #ddd;
+}
+
+#lessons-content {
+    padding: 30px 0;
+}
+
+.lesson-module {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.lesson-module h2 {
+    color: #007bb6;
+    border-bottom: 2px solid #f99b1c;
+    /* Accent line */
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.lesson-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.lesson-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.lesson-item:hover {
+    background-color: #e0e9f0;
+    /* Light blue background on hover */
+    transform: translateX(5px);
+    /* Move slightly to the right on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-title {
+    font-weight: bold;
+}
+
+.lesson-duration {
+    color: #555;
+    font-size: 0.9em;
+    background-color: #f0f0f0;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+/* About Page Specific Styles */
+
+#about-intro {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #f0f8ff;
+    /* Very light blue background */
+    margin-bottom: 30px;
+}
+
+#about-intro h1 {
+    color: #007bb6;
+}
+
+.about-section {
+    padding: 30px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+/* Mission and Vision Layout (using Flexbox) */
+#mission-vision {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: center;
+}
+
+#mission-vision .mission,
+#mission-vision .vision {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+#mission-vision h2 {
+    color: #f99b1c;
+    /* Accent color */
+    margin-top: 0;
+}
+
+/* Philosophy Section */
+#philosophy h2 {
+    color: #007bb6;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.philosophy-points ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: auto;
+}
+
+.philosophy-points li {
+    background: #eaf6ff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #f99b1c;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* About CTA */
+#about-cta {
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* Scroll-to-Top Button Style */
+#scrollToTopBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: #007bb6;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 10px 15px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #f99b1c;
+    /* Darker background on hover */
+}
+
+/* Fade-in Animation Styles */
+.fade-in-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* About Page Specific Styles */
+
+#about-intro {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #f0f8ff;
+    /* Very light blue background */
+    margin-bottom: 30px;
+}
+
+#about-intro h1 {
+    color: #007bb6;
+}
+
+.about-section {
+    padding: 30px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+/* Mission and Vision Layout (using Flexbox) */
+#mission-vision {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: center;
+}
+
+#mission-vision .mission,
+#mission-vision .vision {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+#mission-vision h2 {
+    color: #f99b1c;
+    /* Accent color */
+    margin-top: 0;
+}
+
+/* Philosophy Section */
+#philosophy h2 {
+    color: #007bb6;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.philosophy-points ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: auto;
+}
+
+.philosophy-points li {
+    background: #eaf6ff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #f99b1c;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* About CTA */
+#about-cta {
+    text-align: center;
+    padding: 40px 0;
+}

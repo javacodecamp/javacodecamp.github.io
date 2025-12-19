@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1.2: Data Types & Variables</title>
+    <link rel="stylesheet" href="../style.css"> </head>
+<body>
+    <header>
+        <div class="logo">Java Code Camp</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module1">← Module 1: Java Basic Concepts သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 1.2: Data Types (အချက်အလက် အမျိုးအစားများ) နှင့် Variables</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 25 မိနစ် | အဆင့်: စတင်သူ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Variables ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Variable ဆိုသည်မှာ Program အတွင်း အချက်အလက် (Data) များကို ခေတ္တသိမ်းဆည်းထားသည့် Memory နေရာတစ်ခုကို ပေးထားသော အမည် (Name) ဖြစ်သည်။ Variable ကို အသုံးမပြုမီ ကြေညာ (Declare) ရမည်။</p>
+            
+            <div class="code-example">
+                <h4>Variable ကြေညာပုံ</h4>
+                <pre><code>
+// ဖွဲ့စည်းပုံ: [Data Type] [Variable Name] = [Value];
+int age = 30;
+double price = 19.99;
+char initial = 'K';
+                </code></pre>
+            </div>
+
+            <h2>၂။ Java ၏ Data Types အမျိုးအစားများ</h2>
+            <p>Java တွင် Data Types နှစ်မျိုးရှိသည်။</p>
+            
+            <h3>A. Primitive Data Types (မူလအမျိုးအစားများ)</h3>
+            <p>၎င်းတို့သည် Memory ထဲတွင် Value ကို တိုက်ရိုက်သိမ်းဆည်းပြီး၊ အရွယ်အစား (Size) ကို ပုံသေ သတ်မှတ်ထားသည်။ Java တွင် Primitive Type ၈ မျိုးရှိသည်။</p>
+            
+            <div class="type-table">
+                <table>
+                    <thead>
+                        <tr><th>Type</th><th>ဖော်ပြချက်</th><th>အရွယ်အစား (Size)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>byte</code></td><td>ဂဏန်းအငယ်စားများ (Small integers)</td><td>1 byte</td></tr>
+                        <tr><td><code>short</code></td><td>အလတ်စား ဂဏန်းများ</td><td>2 bytes</td></tr>
+                        <tr><td><code>int</code></td><td>အများဆုံးသုံးသော ဂဏန်းအပြည့် (Integers)</td><td>4 bytes</td></tr>
+                        <tr><td><code>long</code></td><td>ဂဏန်းအကြီးစားများ</td><td>8 bytes</td></tr>
+                        <tr><td><code>float</code></td><td>ဒသမကိန်း (Fractional numbers)</td><td>4 bytes</td></tr>
+                        <tr><td><code>double</code></td><td>တိကျမှုမြင့်သော ဒသမကိန်း (Higher precision)</td><td>8 bytes</td></tr>
+                        <tr><td><code>char</code></td><td>တစ်လုံးတည်းသော စာလုံး (Single character)</td><td>2 bytes (Unicode)</td></tr>
+                        <tr><td><code>boolean</code></td><td>မှန်/မှား တန်ဖိုး (True/False)</td><td>1 bit</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
+
+            <h3>B. Reference Data Types (ရည်ညွှန်း အမျိုးအစားများ)</h3>
+            <p>၎င်းတို့သည် တန်ဖိုး (Value) ကို တိုက်ရိုက်မသိမ်းဆည်းဘဲ၊ Memory ထဲရှိ Object တည်ရှိရာ နေရာ (Address/Reference) ကို သိမ်းဆည်းထားသည်။</p>
+            <ul>
+                <li>**ဥပမာများ:** Classes, Interfaces, Arrays, နှင့် **String** တို့ဖြစ်သည်။</li>
+                <li>**String** သည် စာလုံးများစွာကို သိမ်းဆည်းရန် အသုံးအများဆုံး Reference Type ဖြစ်သည်။</li>
+            </ul>
+            
+            <div class="code-example">
+                <h4>Reference Type ဥပမာ</h4>
+                <pre><code>
+// String သည် Class ဖြစ်၍ Reference Type ဖြစ်သည်
+String name = "Java Code"; 
+
+// String ကို အသုံးပြု၍ အချက်အလက် ထုတ်ပြခြင်း
+System.out.println(name);
+                </code></pre>
+            </div>
+            
+            <blockquote class="tip">
+                Primitive Type များကို စတင်ကြေညာသောအခါ တန်ဖိုးမပေးထားလျှင် (ဥပမာ- <code>int count;</code>) Default Value (သုည သို့မဟုတ် မှား) ရရှိသည်။ Local Variables များတွင်မူ တန်ဖိုးမပေးဘဲ သုံးလျှင် Error ဖြစ်သည်။
+            </blockquote>
+
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script> <footer>
+        <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

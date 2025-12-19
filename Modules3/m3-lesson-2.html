@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3.2: Array Errors & For-each Loop</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Java Code Camp</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module3">← Module 3: Arrays သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 3.2: Array အမှားများ နှင့် For-each Loop</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 18 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ ArrayIndexOutOfBoundsException ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>ဒါဟာ Java Beginner တွေ အဖြစ်အများဆုံး Error တစ်ခုပါ။ Array ထဲမှာ မရှိတဲ့ **Index** (နေရာ) ကို လှမ်းခေါ်တဲ့အခါမှာ ဒီ Exception တက်လာပါတယ်။</p>
+
+            
+
+            <div class="code-example">
+                <h4>Error ဖြစ်စေမည့် ဥပမာ</h4>
+                <pre><code>
+int[] myNumbers = {10, 20, 30}; // အရှည် ၃ ခု (Index 0, 1, 2 ပဲရှိသည်)
+
+// Index 3 ကို ခေါ်ကြည့်ခြင်း (မရှိသောနေရာ)
+System.out.println(myNumbers[3]); 
+                </code></pre>
+                <h4>ရလဒ် (Console Error)</h4>
+                <pre class="output" style="color: #ff5555;">
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+                </pre>
+            </div>
+
+            <h2>၂။ Array ၏ Default Values များ</h2>
+            <p>Array တစ်ခုကို တည်ဆောက်ပြီး တန်ဖိုးချက်ချင်း မထည့်သေးဘူးဆိုရင် Java က အောက်ပါအတိုင်း Default တန်ဖိုးတွေ သတ်မှတ်ပေးထားပါတယ်။</p>
+            <ul>
+                <li>ဂဏန်းများ (int, double, etc.) : <code>0</code> သို့မဟုတ် <code>0.0</code></li>
+                <li>Boolean : <code>false</code></li>
+                <li>Reference (String, Objects) : <code>null</code></li>
+            </ul>
+
+            <h2>၃။ Enhanced for-loop (For-each Loop)</h2>
+            <p>Array ထဲက အချက်အလက်အားလုံးကို တစ်ခုချင်းစီ ထုတ်ကြည့်ချင်တဲ့အခါ ရိုးရိုး <code>for</code> loop ထက် ပိုပြီး ရေးရတာ ရိုးရှင်းတဲ့ **For-each** ကို သုံးနိုင်ပါတယ်။</p>
+
+            
+
+            <div class="code-example">
+                <h4>For-each Loop ဥပမာ</h4>
+                <pre><code>
+String[] fruits = {"Apple", "Banana", "Orange"};
+
+// "fruits Array ထဲက တစ်ခုချင်းစီကို f ထဲထည့်ပြီး ပတ်မယ်" လို့ အဓိပ္ပာယ်ရသည်
+for (String f : fruits) {
+    System.out.println("သစ်သီး: " + f);
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+သစ်သီး: Apple
+သစ်သီး: Banana
+သစ်သီး: Orange
+                </pre>
+            </div>
+
+            <blockquote class="tip">
+                **မှတ်ချက်:** For-each loop ကို Array ထဲက တန်ဖိုးတွေကို ဖတ်ဖို့ (Read-only) အတွက်သာ သုံးသင့်ပါတယ်။ Array ထဲက တန်ဖိုးတွေကို ပြောင်းလဲချင်ရင်တော့ Index ပါတဲ့ ရိုးရိုး For loop ကိုပဲ သုံးရပါမယ်။
+            </blockquote>
+
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer>
+        <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

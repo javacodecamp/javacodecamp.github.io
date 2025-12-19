@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5.6: Important Keywords (this, super, final, static)</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Java Code Camp</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module5">← Module 5: OOP သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 5.6: Constructor နှင့် အရေးကြီးသော Keywords များ</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 40 မိနစ် | အဆင့်: အလယ်အလတ်</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Constructor ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Constructor ဆိုသည်မှာ Object တစ်ခုကို ဖန်တီးလိုက်သည့်အချိန်တွင် အလိုအလျောက် အလုပ်လုပ်သော အထူး Method တစ်ခု ဖြစ်သည်။ ၎င်းကို Variable တန်ဖိုးများကို စတင်သတ်မှတ်ရန် (Initialization) အတွက် အသုံးပြုသည်။</p>
+            <ul>
+                <li>Constructor နာမည်သည် **Class နာမည်နှင့် အတူတူ** ဖြစ်ရမည်။</li>
+                <li>၎င်းတွင် Return Type (void တောင်မှ) မရှိရပါ။</li>
+            </ul>
+
+            <div class="code-example">
+                <h4>Constructor နှင့် `this` Keyword ဥပမာ</h4>
+                <pre><code>
+class Person {
+    String name;
+
+    // Constructor
+    Person(String name) {
+        // this.name သည် Class ၏ variable ကို ရည်ညွှန်းသည်
+        this.name = name; 
+        System.out.println("Object ဆောက်ပြီးပါပြီ။");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person p1 = new Person("Aung Aung");
+        System.out.println("နာမည်: " + p1.name);
+    }
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+Object ဆောက်ပြီးပါပြီ။
+နာမည်: Aung Aung
+                </pre>
+            </div>
+
+            <h2>၂။ `this` နှင့် `super` Keywords</h2>
+            <p><strong>`this`</strong> သည် လက်ရှိ Class အတွင်းရှိ Member များကို ရည်ညွှန်းပြီး၊ <strong>`super`</strong> သည် မိဘ Class (Superclass) ၏ Member များကို ရည်ညွှန်းသည်။</p>
+
+            
+
+            <div class="code-example">
+                <h4>`super` အသုံးပြုပုံ ဥပမာ</h4>
+                <pre><code>
+class Animal {
+    void eat() { System.out.println("Animal eats"); }
+}
+
+class Dog extends Animal {
+    void eat() {
+        super.eat(); // မိဘဆီက eat() ကို အရင်ခေါ်သည်
+        System.out.println("Dog eats meat");
+    }
+}
+                </code></pre>
+            </div>
+
+            <h2>၃။ `static` Keyword</h2>
+            <p><code>static</code> ဟု ကြေညာထားသော Member များသည် Object တစ်ခုချင်းစီနှင့် မဆိုင်ဘဲ **Class တစ်ခုလုံးနှင့် ဆိုင်သည်။** ၎င်းတို့ကို Object ဆောက်စရာမလိုဘဲ Class Name ဖြင့် တိုက်ရိုက်ခေါ်သုံးနိုင်သည်။</p>
+
+            
+
+            <div class="code-example">
+                <h4>`static` ဥပမာ</h4>
+                <pre><code>
+class Counter {
+    static int count = 0; // Class variable
+
+    Counter() {
+        count++;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        new Counter();
+        new Counter();
+        System.out.println("စုစုပေါင်း Object အရေအတွက်: " + Counter.count);
+    }
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+စုစုပေါင်း Object အရေအတွက်: 2
+                </pre>
+            </div>
+
+            <h2>၄။ `final` Keyword</h2>
+            <p><code>final</code> ကို ပြောင်းလဲ၍မရသော အရာများ သတ်မှတ်ရာတွင် သုံးသည်။</p>
+            <ul>
+                <li><strong>Variable:</strong> တန်ဖိုးကို ထပ်ပြင်၍မရပါ။ (Constant ဖြစ်သွားသည်)</li>
+                <li><strong>Method:</strong> Subclass က Override လုပ်၍မရပါ။</li>
+                <li><strong>Class:</strong> အမွေဆက်ခံ (Inherit) လုပ်၍မရပါ။</li>
+            </ul>
+
+            <div class="code-example">
+                <h4>`final` ဥပမာ</h4>
+                <pre><code>
+final int MAX_SPEED = 120;
+// MAX_SPEED = 150; // Error တက်မည် (တန်ဖိုးပြင်မရပါ)
+                </code></pre>
+            </div>
+
+            <blockquote class="tip">
+                **Pro Tip:** `static` နှင့် `final` ကို တွဲသုံးပြီး Java တွင် ကိန်းသေ (Constants) များကို သတ်မှတ်လေ့ရှိသည်။ ဥပမာ- `public static final double PI = 3.14159;`
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer>
+        <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4.1: Method Declaration & Calling</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Java Code Camp</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module4">← Module 4: Methods သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 4.1: Method များ ကြေညာခြင်းနှင့် အသုံးပြုခြင်း</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 20 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Method ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Method ဆိုသည်မှာ အလုပ်တစ်ခုကို လုပ်ဆောင်ရန် စုစည်းထားသော Code အစုအဝေး ဖြစ်သည်။ ၎င်းကို Function ဟုလည်း ခေါ်ကြသည်။ Method များကို အသုံးပြုခြင်းဖြင့် Code များကို ထပ်ခါတလဲလဲ ရေးစရာမလိုဘဲ လိုအပ်သည့်နေရာမှ လှမ်းခေါ် (Call) နိုင်သည်။</p>
+
+            
+
+            <h2>၂။ Method ဖွဲ့စည်းပုံ (Syntax)</h2>
+            <p>Method တစ်ခုတွင် အဓိက အစိတ်အပိုင်း ၄ ခု ပါဝင်သည်။</p>
+            <ul>
+                <li>**Return Type:** Method က အလုပ်လုပ်ပြီးလျှင် ပြန်ပေးမည့် Data Type (ဥပမာ: <code>int</code>, <code>String</code>)။ ဘာမှပြန်မပေးလိုလျှင် <code>void</code> ဟု ရေးရသည်။</li>
+                <li>**Method Name:** Method ကို ခေါ်ယူရန် ပေးထားသော အမည်။</li>
+                <li>**Parameters:** Method ဆီသို့ ပေးပို့လိုက်သော အချက်အလက်များ (မရှိလျှင် ကွင်းလွတ် ထားနိုင်သည်)။</li>
+                <li>**Method Body:** အလုပ်လုပ်မည့် Code များ။</li>
+            </ul>
+
+            <div class="code-example">
+                <h4>ဥပမာ ၁- ရိုးရှင်းသော Method (void type)</h4>
+                <pre><code>
+public class Main {
+    // ၁။ Method ကို ကြေညာခြင်း
+    static void sayHello(String name) {
+        System.out.println("Hello " + name + "!");
+    }
+
+    public static void main(String[] args) {
+        // ၂။ Method ကို လှမ်းခေါ်ခြင်း (Calling)
+        sayHello("Mg Mg");
+        sayHello("Su Su");
+    }
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+Hello Mg Mg!
+Hello Su Su!
+                </pre>
+            </div>
+
+            <h2>၃။ Return Type ပါဝင်သော Method</h2>
+            <p>အကယ်၍ Method တစ်ခုဆီမှ အဖြေတစ်ခုကို ပြန်လည်ရယူလိုပါက <code>return</code> keyword ကို အသုံးပြုရသည်။</p>
+
+            <div class="code-example">
+                <h4>ဥပမာ ၂- ကိန်းနှစ်ခုပေါင်းပြီး အဖြေပြန်ပေးသော Method</h4>
+                <pre><code>
+public class Calculation {
+    // int တန်ဖိုး ပြန်ပေးမည့် method
+    static int addNumbers(int x, int y) {
+        return x + y; // အဖြေကို ပြန်ပေးလိုက်သည်
+    }
+
+    public static void main(String[] args) {
+        int result = addNumbers(10, 20); // အဖြေကို variable ထဲ သိမ်းသည်
+        System.out.println("ပေါင်းလဒ်: " + result);
+    }
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+ပေါင်းလဒ်: 30
+                </pre>
+            </div>
+
+            <blockquote class="tip">
+                **မှတ်ချက်:** <code>static</code> ဟု ရေးရခြင်းမှာ <code>main</code> method ထဲမှနေ၍ Object မဆောက်ဘဲ တိုက်ရိုက်ခေါ်သုံးနိုင်ရန် ဖြစ်သည်။ Object-Oriented အပိုင်းတွင် ၎င်းအကြောင်းကို အသေးစိတ် ထပ်မံလေ့လာရပါမည်။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer>
+        <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

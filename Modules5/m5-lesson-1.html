@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5.1: Class and Object</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Java Code Camp</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module5">← Module 5: OOP သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 5.1: Class နှင့် Object (အခြေခံ အယူအဆ)</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 30 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Class ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Class ဆိုသည်မှာ Object တစ်ခု ဖန်တီးရန်အတွက် အသုံးပြုသော **Blueprint (ပုံစံကြမ်း)** ဖြစ်သည်။ ၎င်းတွင် Object တစ်ခု၌ ရှိရမည့် အချက်အလက် (Fields/Attributes) နှင့် လုပ်ဆောင်ချက် (Methods/Behaviors) များကို သတ်မှတ်ပေးထားသည်။</p>
+
+            
+
+            <h2>၂။ Object ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Object ဆိုသည်မှာ Class မှတစ်ဆင့် လက်တွေ့ ဖန်တီးလိုက်သော **Instance (အစစ်အမှန် အရာဝတ္ထု)** ဖြစ်သည်။ Class တစ်ခုတည်းမှနေ၍ Object ပေါင်းများစွာကို ဖန်တီးနိုင်သည်။</p>
+
+            <div class="code-example">
+                <h4>Class နှင့် Object ဥပမာ (Car Class)</h4>
+                <pre><code>
+// ၁။ Class ကို ကြေညာခြင်း
+class Car {
+    String brand;
+    int year;
+
+    void drive() {
+        System.out.println(brand + " ကားလေး မောင်းနေပါပြီ။");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // ၂။ Object ဖန်တီးခြင်း (Instantiating)
+        Car myCar = new Car(); 
+        
+        // ၃။ အချက်အလက်များ ထည့်သွင်းခြင်း
+        myCar.brand = "Toyota";
+        myCar.year = 2022;
+
+        // ၄။ လုပ်ဆောင်ချက်ကို ခေါ်ယူခြင်း
+        myCar.drive();
+    }
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+Toyota ကားလေး မောင်းနေပါပြီ။
+                </pre>
+            </div>
+
+            <h2>၃။ Class နှင့် Object ၏ ကွာခြားချက်</h2>
+            <div class="type-table">
+                <table>
+                    <thead>
+                        <tr><th>Class (Blueprint)</th><th>Object (Instance)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>အယူအဆ (Logical Entity) သာဖြစ်သည်။</td><td>လက်တွေ့ရှိသော (Physical Entity) ဖြစ်သည်။</td></tr>
+                        <tr><td>Memory နေရာယူမှု မရှိပါ။</td><td>ဖန်တီးလိုက်သောအခါ Memory နေရာယူသည်။</td></tr>
+                        <tr><td>တစ်ကြိမ်သာ ကြေညာရသည်။</td><td>လိုအပ်သလောက် အကြိမ်ကြိမ် ဖန်တီးနိုင်သည်။</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <blockquote class="tip">
+                **မှတ်သားရန်:** Java တွင် <code>new</code> keyword ကို တွေ့လျှင် Object အသစ်တစ်ခုကို Memory (Heap) ပေါ်တွင် နေရာချ (Allocate) လိုက်ပြီဟု မှတ်သားနိုင်ပါသည်။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer>
+        <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

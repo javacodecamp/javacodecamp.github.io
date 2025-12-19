@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5.4: Encapsulation</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Java Code Camp</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module5">← Module 5: OOP သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 5.4: Encapsulation (အချက်အလက်ဖုံးကွယ်ခြင်း)</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 20 မိနစ် | အဆင့်: အလယ်အလတ်</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Encapsulation ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Encapsulation ဆိုသည်မှာ Variables (Data) များနှင့် ၎င်းတို့ကို အလုပ်လုပ်သော Methods များကို စုစည်းပြီး တစ်ခုတည်းသော Unit (Class) အတွင်း ထည့်သွင်းထားခြင်း ဖြစ်သည်။ အချက်အလက်များကို ပြင်ပမှ တိုက်ရိုက် မမြင်နိုင်ရန်နှင့် မပြင်ဆင်နိုင်ရန် <strong>Private</strong> အဖြစ် ထားရှိပြီး စစ်ဆေးမှုများ ပြုလုပ်နိုင်ရန် <strong>Getters</strong> နှင့် <strong>Setters</strong> တို့ကို အသုံးပြုသည်။</p>
+
+            
+
+            <h2>၂။ Encapsulation ပြုလုပ်ပုံ အဆင့်ဆင့်</h2>
+            <ol>
+                <li>Class အတွင်းရှိ Variables များကို <code>private</code> အဖြစ် ကြေညာပါ။</li>
+                <li>တန်ဖိုးကို ကြည့်ရှုရန်အတွက် <code>public get...()</code> method ဖန်တီးပါ။</li>
+                <li>တန်ဖိုးကို ပြင်ဆင်ရန်အတွက် <code>public set...()</code> method ဖန်တီးပါ။</li>
+            </ol>
+
+            <div class="code-example">
+                <h4>Encapsulation ဥပမာ (Student Class)</h4>
+                <pre><code>
+class Student {
+    // ၁။ Private Variables (ပြင်ပက တိုက်ရိုက် မမြင်ရပါ)
+    private String name;
+    private int age;
+
+    // ၂။ Getter Method (တန်ဖိုး ထုတ်ပေးရန်)
+    public String getName() {
+        return name;
+    }
+
+    // ၃။ Setter Method (တန်ဖိုး ထည့်သွင်းရန်)
+    public void setName(String newName) {
+        this.name = newName;
+    }
+
+    // Setter တွင် Logic များ ထည့်သွင်း စစ်ဆေးနိုင်သည်
+    public void setAge(int newAge) {
+        if (newAge > 0) {
+            this.age = newAge;
+        } else {
+            System.out.println("Error: အသက်သည် ၀ ထက် ကြီးရမည်။");
+        }
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+        
+        // s.name = "Mg Mg"; // Error တက်မည် (Private ဖြစ်သောကြောင့်)
+        
+        s.setName("Mg Mg");
+        s.setAge(20);
+
+        System.out.println("နာမည်: " + s.getName());
+        System.out.println("အသက်: " + s.getAge());
+    }
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+နာမည်: Mg Mg
+အသက်: 20
+                </pre>
+            </div>
+
+            <h2>၃။ အဘယ်ကြောင့် Encapsulation ကို သုံးရသနည်း?</h2>
+            <ul>
+                <li>**Better Control:** Variable တန်ဖိုးများကို Setter ထဲတွင် စစ်ဆေးပြီးမှ ပြောင်းလဲခွင့် ပေးနိုင်သည်။ (ဥပမာ- အသက်ကို အနှုတ်ကိန်း ပေး၍မရအောင် တားဆီးခြင်း)။</li>
+                <li>**Security:** အရေးကြီးသော အချက်အလက်များကို တိုက်ရိုက် မပြင်နိုင်အောင် ဖုံးကွယ်ထားနိုင်သည်။</li>
+                <li>**Flexibility:** စာမျက်နှာပြင်ပက Code များကို မထိခိုက်ဘဲ Class အတွင်းရှိ Logic များကို စိတ်ကြိုက် ပြောင်းလဲနိုင်သည်။</li>
+            </ul>
+
+            <blockquote class="tip">
+                Encapsulation ကို အလွယ်မှတ်ရလျှင် **"Private Fields + Public Getters/Setters"** ဟု မှတ်သားနိုင်ပါသည်။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer>
+        <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

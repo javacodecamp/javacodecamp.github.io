@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.1: If, Else If, Else Statements</title>
+    <link rel="stylesheet" href="../style.css"> </head>
+<body>
+    <header>
+        <div class="logo">Java Code Camp</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module2">← Module 2: Control Flow သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 2.1: If, Else If, Else Statements (ဆုံးဖြတ်ချက်များ)</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 25 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Control Flow ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Control Flow ဆိုသည်မှာ Program တစ်ခုအတွင်းရှိ Code များကို မည်သည့်အစီအစဉ်အတိုင်း လုပ်ဆောင်မည်ကို သတ်မှတ်ခြင်းဖြစ်သည်။ **if/else** statements များသည် Program အား အခြေအနေ (Condition) များပေါ်မူတည်၍ လမ်းကြောင်းပြောင်းလဲ ဆုံးဖြတ်နိုင်စွမ်းကို ပေးသည်။</p>
+
+            <h2>၂။ The `if` Statement</h2>
+            <p>သတ်မှတ်ထားသော အခြေအနေ (Condition) သည် မှန်ကန်သည် (<code>true</code>) ဆိုပါက၊ Code Block တစ်ခုကို လုပ်ဆောင်ရန်အတွက် အသုံးပြုသည်။</p>
+            
+            <div class="code-example">
+                <h4>`if` Statement ဥပမာ</h4>
+                <pre><code>
+int score = 75;
+
+if (score > 70) {
+    System.out.println("ဂုဏ်ယူပါတယ်၊ သင် အောင်မြင်ပါသည်!");
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+ဂုဏ်ယူပါတယ်၊ သင် အောင်မြင်ပါသည်!
+                </pre>
+            </div>
+            
+            <h2>၃။ The `if-else` Statement</h2>
+            <p>အခြေအနေ (Condition) သည် မှန်ကန်လျှင် (`true` ဖြစ်လျှင်) **`if`** Code Block ကို လုပ်ဆောင်မည်။ မှားယွင်းလျှင် (`false` ဖြစ်လျှင်) **`else`** Code Block ကို လုပ်ဆောင်မည်။</p>
+            
+            <div class="code-example">
+                <h4>`if-else` Statement ဥပမာ</h4>
+                <pre><code>
+int age = 16;
+String eligibility;
+
+if (age >= 18) {
+    eligibility = "မဲပေးခွင့် ရှိသည်";
+} else {
+    eligibility = "မဲပေးခွင့် မရှိသေးပါ";
+}
+
+System.out.println("ရလဒ်: " + eligibility);
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+ရလဒ်: မဲပေးခွင့် မရှိသေးပါ
+                </pre>
+            </div>
+            
+            <h2>၄။ The `if-else if-else` Statement</h2>
+            <p>အခြေအနေများစွာကို စစ်ဆေးလိုသည့်အခါ အသုံးပြုသည်။ ပထမဆုံး `true` ဖြစ်သော Condition ၏ Code Block ကိုသာ လုပ်ဆောင်ပြီး ကျန်တာများကို ကျော်သွားသည်။</p>
+            
+            <div class="code-example">
+                <h4>`if-else if-else` Statement ဥပမာ (Grade စစ်ခြင်း)</h4>
+                <pre><code>
+int marks = 85;
+String grade;
+
+if (marks >= 90) {
+    grade = "A";
+} else if (marks >= 80) { // 80 မှ 89 အတွင်းသာ စစ်ဆေးသည်
+    grade = "B";
+} else if (marks >= 70) {
+    grade = "C";
+} else {
+    grade = "F";
+}
+
+System.out.println("သင်ရရှိသော Grade: " + grade);
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+သင်ရရှိသော Grade: B
+                </pre>
+            </div>
+
+            <blockquote class="tip">
+                Condition များကို <code>==</code> (တူညီသည်), <code>></code> (ပိုကြီးသည်), <code><</code> (ပိုသေးသည်), <code>&&</code> (AND), <code>||</code> (OR) စသည့် **Logical Operators** များဖြင့် စစ်ဆေးရမည်။
+            </blockquote>
+
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script> <footer>
+        <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

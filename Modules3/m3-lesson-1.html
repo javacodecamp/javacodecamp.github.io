@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3.1: One-dimensional & Multi-dimensional Arrays</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Java Code Camp</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module3">← Module 3: Arrays သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 3.1: One-D & Multi-D Arrays (အစုအဝေးများ)</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 20 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Array ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Array ဆိုသည်မှာ **တူညီသော Data Type** ရှိသည့် တန်ဖိုးများကို အစုအဝေးတစ်ခုတည်းအဖြစ် သိမ်းဆည်းထားသော အရာဖြစ်သည်။ Array တစ်ခုကို တည်ဆောက်ပြီးပါက ၎င်း၏ **Size (အရွယ်အစား)** ကို ထပ်မံတိုးချဲ့ခြင်း သို့မဟုတ် လျှော့ချခြင်း ပြုလုပ်၍မရပါ။</p>
+
+            
+
+            <h2>၂။ One-dimensional Array (တစ်ဖက်သတ် Array)</h2>
+            <p>အသုံးအများဆုံး Array ပုံစံဖြစ်ပြီး စာရင်းတစ်ခုကဲ့သို့ အချက်အလက်များကို သိမ်းဆည်းသည်။</p>
+            
+            <div class="code-example">
+                <h4>Array ကြေညာခြင်းနှင့် အသုံးပြုခြင်း</h4>
+                <pre><code>
+// ၁။ Array ကြေညာခြင်း (အရွယ်အစား ၃ ခုစာ)
+int[] numbers = new int[3];
+
+// ၂။ တန်ဖိုးများ ထည့်သွင်းခြင်း (Index သည် 0 မှ စသည်)
+numbers[0] = 10;
+numbers[1] = 20;
+numbers[2] = 30;
+
+// ၃။ တန်ဖိုးကို ပြန်ထုတ်ကြည့်ခြင်း
+System.out.println("ပထမကိန်း: " + numbers[0]);
+System.out.println("Array အရှည်: " + numbers.length);
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+ပထမကိန်း: 10
+Array အရှည်: 3
+                </pre>
+            </div>
+            
+            <h2>၃။ Multi-dimensional Array (ဘက်စုံ Array)</h2>
+            <p>Array တစ်ခု၏ အတွင်း၌ နောက်ထပ် Array များ ထပ်မံပါဝင်ခြင်းဖြစ်သည်။ အသုံးအများဆုံးမှာ ဇယား (Table) ပုံစံကဲ့သို့ Row နှင့် Column ပါဝင်သော **2D Array** ဖြစ်သည်။</p>
+            
+            [0], [0][1]]
+
+            <div class="code-example">
+                <h4>2D Array ဥပမာ</h4>
+                <pre><code>
+// Row ၂ ခု နှင့် Column ၃ ခု ပါသော 2D Array
+int[][] matrix = {
+    {1, 2, 3}, // Row 0
+    {4, 5, 6}  // Row 1
+};
+
+// Row 1, Column 2 မှ တန်ဖိုး (6) ကို ထုတ်ကြည့်ခြင်း
+System.out.println("တန်ဖိုး: " + matrix[1][2]);
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+တန်ဖိုး: 6
+                </pre>
+            </div>
+
+            <blockquote class="tip">
+                Array ၏ Index သည် အမြဲတမ်း **0** မှ စတင်ကြောင်း မမေ့ပါနှင့်။ အကယ်၍ Array အရှည် ၅ ခုရှိလျှင် နောက်ဆုံး Index သည် **4** သာ ဖြစ်သည်။
+            </blockquote>
+
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer>
+        <p>&copy; 2025 Java Code Camp. All rights reserved.</p>
+    </footer>
+</body>
+</html>
