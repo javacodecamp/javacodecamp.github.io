@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7.2: StringBuilder (append, insert, reverse)</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module7">← Module 7: String သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 7.2: StringBuilder (append,insert,reverse)</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 15 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ StringBuilder ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>StringBuilder ဆိုသည်မှာ **Mutable** (ပြင်ဆင်၍ရသော) စာသား Object တစ်ခုဖြစ်သည်။ ၎င်းကို အသုံးပြုခြင်းဖြင့်
+                စာသားအသစ်များ ထပ်ပေါင်းခြင်း၊ ဖြတ်ထုတ်ခြင်းတို့ကို Memory အပိုမကုန်ဘဲ လုပ်ဆောင်နိုင်သည်။</p>
+
+
+
+            <h2>၂။ အသုံးများသော StringBuilder Methods များ</h2>
+
+            <div class="code-example">
+                <h4>လက်တွေ့အသုံးပြုပုံ ဥပမာ</h4>
+                <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        // StringBuilder Object တစ်ခု တည်ဆောက်ခြင်း
+        StringBuilder sb = new StringBuilder("Hello");
+
+        // ၁။ append() - စာသား နောက်ကနေ ပေါင်းထည့်ခြင်း
+        sb.append(" Java"); 
+        System.out.println("Append ပြီးနောက်: " + sb); // Hello Java
+
+        // ၂။ insert() - ကြားထဲသို့ စာသား ထိုးထည့်ခြင်း
+        sb.insert(5, " World");
+        System.out.println("Insert ပြီးနောက်: " + sb); // Hello World Java
+
+        // ၃။ reverse() - စာသားကို နောက်ပြန်လှည့်ခြင်း
+        sb.reverse();
+        System.out.println("Reverse ပြီးနောက်: " + sb); // avaJ dlroW olleH
+
+        // ၄။ toString() - StringBuilder မှ ပုံမှန် String သို့ ပြန်ပြောင်းခြင်း
+        String finalResult = sb.toString();
+    }
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+Append ပြီးနောက်: Hello Java
+Insert ပြီးနောက်: Hello World Java
+Reverse ပြီးနောက်: avaJ dlroW olleH
+                </pre>
+            </div>
+
+            <h2>၃။ String နှင့် StringBuilder မည်သည်ကို သုံးသင့်သနည်း?</h2>
+            <ul>
+                <li><strong>String:</strong> စာသားကို တစ်ခါပဲ သတ်မှတ်ပြီး နောက်ထပ် မပြင်တော့ဘူးဆိုရင် သုံးပါ။</li>
+                <li><strong>StringBuilder:</strong> Loop တစ်ခုထဲမှာ စာသားတွေကို ခဏခဏ ပေါင်းနေရမယ်ဆိုရင် (ဥပမာ-
+                    စာအုပ်တစ်အုပ်စာ စာသားတွေကို ပေါင်းခြင်း) StringBuilder ကို မဖြစ်မနေ သုံးသင့်ပါတယ်။</li>
+            </ul>
+
+            <blockquote class="tip">
+                **သိထားရန်:** Multi-threading (အလုပ်တွေအများကြီး တစ်ပြိုင်တည်းလုပ်တဲ့ ပရိုဂရမ်) တွေမှာဆိုရင်တော့
+                `StringBuilder` အစား Thread-safe ဖြစ်တဲ့ `StringBuffer` ကို သုံးလေ့ရှိပါတယ်။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer id="main-footer"></footer>
+</body>
+
+</html>

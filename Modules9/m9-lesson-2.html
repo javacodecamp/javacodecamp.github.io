@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9.2: Checked vs Unchecked & throw, throws</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module9">← Module 9: Exception Handling သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 9.2: Checked vs Unchecked နှင့် throw, throws</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 18 မိနစ် | အဆင့်: အလယ်အလတ်</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Checked vs Unchecked Exceptions</h2>
+            <p>Java တွင် Exception များကို Compile လုပ်ချိန်၌ စစ်ဆေးမှု ရှိ/မရှိ ပေါ်မူတည်၍ နှစ်မျိုးခွဲခြားထားသည်။</p>
+
+
+
+            <div class="type-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Checked Exception</th>
+                            <th>Unchecked Exception</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Compile-time တွင် စစ်ဆေးသည်။</td>
+                            <td>Runtime (Run နေစဉ်) မှသာ ဖြစ်ပေါ်သည်။</td>
+                        </tr>
+                        <tr>
+                            <td>မဖြစ်မနေ try-catch သို့မဟုတ် throws သုံးရသည်။</td>
+                            <td>အသုံးပြုရန် မဖြစ်မနေ မလိုအပ်ပါ။</td>
+                        </tr>
+                        <tr>
+                            <td>ဥပမာ - <code>IOException, SQLException</code></td>
+                            <td>ဥပမာ - <code>NullPointerException, ArrayIndexOutOfBoundsException</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>၂။ `throw` Keyword</h2>
+            <p><code>throw</code> keyword ကို Exception တစ်ခုကို ကိုယ်တိုင် **ပစ်ထုတ် (Manually create)** ရန်အတွက်
+                အသုံးပြုသည်။</p>
+
+            <div class="code-example">
+                <h4>throw အသုံးပြုပုံ ဥပမာ</h4>
+                <pre><code>
+static void validateAge(int age) {
+    if (age < 18) {
+        // Exception တစ်ခုကို ကိုယ်တိုင် ပစ်ထုတ်လိုက်သည်
+        throw new ArithmeticException("အသက် ၁၈ မပြည့်သဖြင့် မဲပေးခွင့်မရှိပါ။");
+    } else {
+        System.out.println("မဲပေးနိုင်ပါသည်။");
+    }
+}
+                </code></pre>
+            </div>
+
+            <h2>၃။ `throws` Keyword</h2>
+            <p><code>throws</code> keyword ကို Method Signature တွင် အသုံးပြုပြီး ၎င်း Method အတွင်းမှ တက်လာနိုင်သော
+                Exception များကို **ကြိုတင်အသိပေး (Declare)** ရန် သုံးသည်။ ၎င်းသည် Error ကို မဖြေရှင်းဘဲ
+                ခေါ်ယူအသုံးပြုမည့်သူထံ တာဝန်လွှဲလိုက်ခြင်း ဖြစ်သည်။</p>
+
+
+
+            <div class="code-example">
+                <h4>throws အသုံးပြုပုံ ဥပမာ</h4>
+                <pre><code>
+import java.io.*;
+
+class Test {
+    // ဤ method သည် IOException တက်နိုင်သည်ဟု ကြေညာထားသည်
+    void readFile() throws IOException {
+        throw new IOException("ဖိုင်ဖတ်၍မရပါ။");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Test obj = new Test();
+        try {
+            obj.readFile();
+        } catch (IOException e) {
+            System.out.println("Error ကို ဤနေရာတွင် ဖမ်းလိုက်သည်: " + e.getMessage());
+        }
+    }
+}
+                </code></pre>
+            </div>
+
+            <blockquote class="tip">
+                **မှတ်သားရန်:** `throw` ကို Method ထဲတွင် အသုံးပြုပြီး `throws` ကို Method နာမည်ဘေးတွင် အသုံးပြုသည်။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer id="main-footer"></footer>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6.2: Auto-boxing & Unboxing</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module6">← Module 6: Wrapper Classes သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 6.2: Auto-boxing နှင့် Unboxing</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 10 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Auto-boxing ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p><strong>Auto-boxing</strong> ဆိုသည်မှာ Java Compiler က Primitive data types များကို ၎င်းတို့နှင့်
+                သက်ဆိုင်ရာ Wrapper class objects များအဖြစ် အလိုအလျောက် ပြောင်းလဲပေးခြင်း ဖြစ်သည်။ ဥပမာ- <code>int</code>
+                မှ <code>Integer</code> သို့ ပြောင်းခြင်း။</p>
+
+
+
+            <h2>၂။ Unboxing ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p><strong>Unboxing</strong> ဆိုသည်မှာ Wrapper class object တစ်ခုမှ ၎င်း၏ သက်ဆိုင်ရာ Primitive data type
+                သို့ အလိုအလျောက် ပြန်လည်ပြောင်းလဲပေးခြင်း ဖြစ်သည်။ ဥပမာ- <code>Integer</code> မှ <code>int</code> သို့
+                ပြောင်းခြင်း။</p>
+
+            <div class="code-example">
+                <h4>Auto-boxing နှင့် Unboxing ဥပမာ</h4>
+                <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        // ၁။ Auto-boxing (int to Integer)
+        int a = 20;
+        Integer obj = a; // Compiler က Integer.valueOf(a) ကို အလိုအလျောက် လုပ်ပေးသည်
+
+        // ၂။ Unboxing (Integer to int)
+        Integer b = 50;
+        int c = b; // Compiler က b.intValue() ကို အလိုအလျောက် လုပ်ပေးသည်
+
+        System.out.println("Object value: " + obj);
+        System.out.println("Primitive value: " + c);
+    }
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+Object value: 20
+Primitive value: 50
+                </pre>
+            </div>
+
+            <h2>၃။ အဘယ်ကြောင့် အသုံးပြုသနည်း?</h2>
+            <p>Auto-boxing နှင့် Unboxing ကြောင့် Developer များသည် Primitive နှင့် Object ကြား ပြောင်းလဲရန် Method
+                များကို ကိုယ်တိုင် ခေါ်ယူရေးသားရန် မလိုတော့ဘဲ Code များကို ပိုမိုရှင်းလင်းစွာ ရေးသားနိုင်လာသည်။
+                အထူးသဖြင့် **Collections (ArrayList, etc.)** များတွင် Primitive များကို အသုံးပြုသည့်အခါ
+                အလွန်အသုံးဝင်သည်။</p>
+
+            <blockquote class="tip">
+                **သတိထားရန်:** Auto-boxing သည် အလုပ်လုပ်ရာတွင် အချိန်အနည်းငယ် ပိုယူတတ်သဖြင့် အကြိမ်ရေ သန်းပေါင်းများစွာ
+                လည်ပတ်နေသော Loop များအတွင်း၌ Primitive types များကိုသာ အသုံးပြုခြင်းက Performance ပိုကောင်းစေပါသည်။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer id="main-footer"></footer>
+</body>
+
+</html>

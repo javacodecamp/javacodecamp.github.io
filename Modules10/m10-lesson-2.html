@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10.2: java.time API</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module10">← Module 10: Java API သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 10.2: java.time (LocalDate, LocalTime, LocalDateTime)</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 20 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ java.time Package ၏ အဓိက Class များ</h2>
+            <p>ရက်စွဲနှင့် အချိန်များကို ကိုင်တွယ်ရန် အောက်ပါ Class များကို အသုံးအများဆုံး ဖြစ်သည်-</p>
+            <ul>
+                <li><strong>LocalDate:</strong> ရက်စွဲ (နှစ်၊ လ၊ ရက်) ကိုသာ ပြသသည်။</li>
+                <li><strong>LocalTime:</strong> အချိန် (နာရီ၊ မိနစ်၊ စက္ကန့်) ကိုသာ ပြသသည်။</li>
+                <li><strong>LocalDateTime:</strong> ရက်စွဲနှင့် အချိန် နှစ်ခုလုံးကို ပြသသည်။</li>
+                <li><strong>DateTimeFormatter:</strong> ရက်စွဲများကို မိမိစိတ်ကြိုက် ပုံစံ (Format) ပြောင်းလဲရန်။</li>
+            </ul>
+
+
+
+            <h2>၂။ လက်ရှိ ရက်စွဲနှင့် အချိန်ကို ရယူခြင်း</h2>
+            <div class="code-example">
+                <pre><code>
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.LocalDateTime;
+
+public class Main {
+    public static void main(String[] args) {
+        LocalDate myDate = LocalDate.now(); // လက်ရှိ ရက်စွဲ
+        LocalTime myTime = LocalTime.now(); // လက်ရှိ အချိန်
+        LocalDateTime myFull = LocalDateTime.now(); // နှစ်ခုလုံး
+
+        System.out.println("ရက်စွဲ: " + myDate);
+        System.out.println("အချိန်: " + myTime);
+        System.out.println("နှစ်ခုလုံး: " + myFull);
+    }
+}
+                </code></pre>
+            </div>
+
+            <h2>၃။ DateTimeFormatter ဖြင့် ပုံစံပြောင်းခြင်း</h2>
+            <p>ပုံမှန်အားဖြင့် Java သည် <code>YYYY-MM-DD</code> ပုံစံဖြင့် ပြသသော်လည်း၊ ကျွန်ုပ်တို့သည် မိမိတို့
+                အလိုရှိရာ ပုံစံသို့ ပြောင်းလဲနိုင်သည်။</p>
+
+            <div class="code-example">
+                <pre><code>
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+    public static void main(String[] args) {
+        LocalDateTime now = LocalDateTime.now();
+        
+        // ပုံစံသတ်မှတ်ခြင်း (ဥပမာ- ရက်-လ-နှစ် နာရီ:မိနစ်)
+        DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        
+        String formattedDate = now.format(myFormat);
+        System.out.println("ပုံစံပြောင်းပြီးနောက်: " + formattedDate);
+    }
+}
+                </code></pre>
+            </div>
+
+            <h2>၄။ ရက်စွဲများ တွက်ချက်ခြင်း</h2>
+            <p>ရက်ပေါင်းပေါင်းခြင်း သို့မဟုတ် နှုတ်ခြင်းများကို လွယ်ကူစွာ လုပ်ဆောင်နိုင်သည်။</p>
+            <div class="code-example">
+                <pre><code>
+LocalDate today = LocalDate.now();
+LocalDate nextWeek = today.plusDays(7); // ၇ ရက် ပေါင်းခြင်း
+LocalDate lastMonth = today.minusMonths(1); // ၁ လ နှုတ်ခြင်း
+                </code></pre>
+            </div>
+
+            <blockquote class="tip">
+                **မှတ်ချက်:** `java.time` package ထဲရှိ Object များသည် **Immutable** ဖြစ်သည်။ ထို့ကြောင့် `plusDays()`
+                ကဲ့သို့ method များကို ခေါ်သည့်အခါ မူလ Object ကို မပြောင်းလဲဘဲ Object အသစ်တစ်ခုကိုသာ ပြန်ပေးသည်။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer id="main-footer"></footer>
+</body>
+
+</html>

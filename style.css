@@ -15,6 +15,38 @@ body {
     padding: 20px 0;
 }
 
+/* Header ကို Fixed ထားရင် ကျန်တဲ့ Content တွေ ကွယ်မသွားအောင် လုပ်ခြင်း */
+body {
+    padding-top: 80px;
+    /* Header ရဲ့ အမြင့်ထက် ပိုတဲ့ space ပေးပါ */
+}
+
+/* Page တစ်ခုချင်းစီရဲ့ Title နဲ့ Content များအတွက် padding ပေးခြင်း */
+.page-content {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    /* အလယ်ဗဟိုမှာ ရှိနေစေရန် */
+    min-height: 80vh;
+}
+
+/* ခေါင်းစဉ် (H1) ကို ပိုလှအောင် ပြင်ခြင်း */
+.page-content h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    border-bottom: 3px solid #3498db;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Section တွေကြား ခြားနားမှု ပေးခြင်း */
+.page-content h2 {
+    margin-top: 30px;
+    color: #2980b9;
+}
+
+
 /* Header and Navigation */
 header {
     background: #007bb6;
@@ -161,11 +193,38 @@ nav ul li a.active {
 
 /* Footer */
 footer {
-    background: #333;
+    background-color: #2c3e50;
     color: white;
+    padding: 40px 0;
+    margin-top: 50px;
     text-align: center;
-    padding: 10px 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links li a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.page-content {
+    min-height: 70vh;
+    /* Footer ကို အောက်ဆုံးမှာ ကပ်နေအောင် လုပ်ပေးသည် */
+    padding: 40px 20px;
 }
 
 /* Lessons Page Specific Styles */

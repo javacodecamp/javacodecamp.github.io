@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10.1: java.lang Package</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module10">← Module 10: Java API သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 10.1: java.lang (String, Math, Object)</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 20 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ java.lang Package ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p><code>java.lang</code> သည် Java ၏ အခြေခံအကျဆုံး Package ဖြစ်သည်။ ၎င်းတွင် ပါဝင်သော Class များကို
+                အသုံးပြုရန်အတွက် <code>import</code> လုပ်ရန် မလိုပါ။ Java က အလိုအလျောက် ထည့်သွင်းပေးထားပြီး ဖြစ်သည်။</p>
+
+            <h2>၂။ Object Class (အနွယ်တော်အားလုံး၏ အမိ)</h2>
+            <p>Java တွင် ရှိသမျှ Class အားလုံးသည် <code>Object</code> class ကို တိုက်ရိုက်သော်လည်းကောင်း၊
+                သွယ်ဝိုက်၍သော်လည်းကောင်း အမွေဆက်ခံထားသည်။</p>
+            <ul>
+                <li><strong>toString():</strong> Object တစ်ခုကို String အဖြစ် ပြောင်းလဲရန်။</li>
+                <li><strong>equals():</strong> Object နှစ်ခု တူ/မတူ စစ်ဆေးရန်။</li>
+            </ul>
+
+
+
+            <h2>၃။ Math Class (သင်္ချာဆိုင်ရာ တွက်ချက်မှုများ)</h2>
+            <p><code>Math</code> class တွင် သင်္ချာဆိုင်ရာ လုပ်ဆောင်ချက်များစွာ ပါဝင်သည်။ ၎င်းရှိ method အားလုံးသည်
+                <code>static</code> ဖြစ်သောကြောင့် Object ဆောက်ရန် မလိုဘဲ တိုက်ရိုက်သုံးနိုင်သည်။
+            </p>
+
+            <div class="code-example">
+                <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("အကြီးဆုံးကိန်း: " + Math.max(10, 20)); // 20
+        System.out.println("အပေါင်းကိန်းပြောင်းခြင်း: " + Math.abs(-50)); // 50
+        System.out.println("နှစ်ထပ်ကိန်းရင်း: " + Math.sqrt(16)); // 4.0
+        System.out.println("ပါဝါတင်ခြင်း: " + Math.pow(2, 3)); // 8.0
+        System.out.println("Random ထုတ်ခြင်း: " + Math.random()); // 0.0 to 1.0
+    }
+}
+                </code></pre>
+            </div>
+
+            <h2>၄။ System Class</h2>
+            <p>System နှင့် ပတ်သက်သော အချက်အလက်များကို သိရှိရန် သုံးသည်။</p>
+            <ul>
+                <li><code>System.out</code>: Output ထုတ်ရန်။</li>
+                <li><code>System.in</code>: Input ယူရန်။</li>
+                <li><code>System.currentTimeMillis()</code>: လက်ရှိအချိန်ကို milliseconds ဖြင့် သိရန်။</li>
+            </ul>
+
+            <blockquote class="tip">
+                **သိမှတ်ဖွယ်:** `String` class သည်လည်း `java.lang` package ထဲတွင် ပါဝင်သောကြောင့် ကျွန်ုပ်တို့သည် String
+                များကို import လုပ်စရာမလိုဘဲ အမြဲတမ်း သုံးနိုင်နေခြင်း ဖြစ်သည်။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer id="main-footer"></footer>
+</body>
+
+</html>

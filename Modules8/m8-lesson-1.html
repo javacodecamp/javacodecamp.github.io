@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8.1: Packages & Imports</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module8">← Module 8: Packages သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 8.1: Package Declaration, Importing Classes & FQNs</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 15 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Package ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Package ဆိုသည်မှာ တစ်ခုနှင့်တစ်ခု ဆက်စပ်နေသော Class များ၊ Interfaces များနှင့် Sub-packages များကို
+                စုစည်းထားသည့် **Folder** တစ်ခုဖြစ်သည်။ ၎င်းသည် နာမည်တူ Class များကြား ပဋိပက္ခမဖြစ်အောင် (Naming
+                Conflicts) ကာကွယ်ပေးသည်။</p>
+
+
+
+            <h2>၂။ Package ကြေညာခြင်း (Package Declaration)</h2>
+            <p>Java ဖိုင်တစ်ခုကို Package တစ်ခုအတွင်း ထည့်လိုလျှင် Code ၏ အပေါ်ဆုံးတွင် <code>package</code> keyword ကို
+                အသုံးပြုရသည်။</p>
+            <div class="code-example">
+                <pre><code>
+package com.myproject.utils; // Package ကြေညာခြင်း
+
+public class Calculator {
+    // ... code ...
+}
+                </code></pre>
+            </div>
+
+            <h2>၃။ Importing Classes</h2>
+            <p>အခြား Package ထဲတွင် ရှိသော Class တစ်ခုကို အသုံးပြုလိုလျှင် <code>import</code> keyword ဖြင့် ခေါ်ယူရသည်။
+            </p>
+            <ul>
+                <li><strong>Class တစ်ခုတည်းကို Import လုပ်ခြင်း:</strong> <code>import java.util.Scanner;</code></li>
+                <li><strong>Package တစ်ခုလုံးရှိ Class အားလုံးကို Import လုပ်ခြင်း:</strong>
+                    <code>import java.util.*;</code>
+                </li>
+            </ul>
+
+            <h2>၄။ Fully Qualified Name (FQN)</h2>
+            <p><code>import</code> မသုံးဘဲ Class တစ်ခု၏ Package လိပ်စာအပြည့်အစုံကို ရေးသားပြီး ခေါ်ယူခြင်းကို
+                <strong>Fully Qualified Name</strong> ဟု ခေါ်သည်။
+            </p>
+            <div class="code-example">
+                <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        // Import မသုံးဘဲ FQN ဖြင့် Scanner ကို ခေါ်သုံးခြင်း
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+    }
+}
+                </code></pre>
+            </div>
+
+            <blockquote class="tip">
+                **မှတ်သားရန်:** <code>java.lang</code> package ထဲတွင်ရှိသော Class များ (ဥပမာ- String, System) ကိုမူ Java
+                က အလိုအလျောက် Import လုပ်ပေးထားသဖြင့် ထပ်မံ Import လုပ်ရန် မလိုပါ။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer id="main-footer"></footer>
+</body>
+
+</html>

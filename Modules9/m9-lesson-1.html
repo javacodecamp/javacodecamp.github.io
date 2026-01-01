@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9.1: try, catch, finally blocks</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module9">← Module 9: Exception Handling သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 9.1: try, catch နှင့် finally blocks</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 20 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Exception Handling ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Exception ဆိုသည်မှာ Program တစ်ခု Run နေစဉ်အတွင်း ပုံမှန်အလုပ်လုပ်မှုကို အနှောင့်အယှက်ဖြစ်စေသော Error
+                တစ်ခုဖြစ်သည်။ Exception Handling သည် ထို Error များကို စနစ်တကျ ဖမ်းယူဖြေရှင်းပြီး Program ကို
+                ဆက်လက်လည်ပတ်နိုင်အောင် ပြုလုပ်ပေးခြင်း ဖြစ်သည်။</p>
+
+
+
+            <h2>၂။ Try-Catch Block အသုံးပြုပုံ</h2>
+            <ul>
+                <li><strong>Try block:</strong> Error တက်နိုင်ခြေရှိသော Code များကို ဤနေရာတွင် ရေးရသည်။</li>
+                <li><strong>Catch block:</strong> Error တက်လာပါက မည်သို့လုပ်ဆောင်မည်ကို ဤနေရာတွင် ရေးရသည်။</li>
+            </ul>
+
+            <div class="code-example">
+                <h4>Try-Catch ဥပမာ</h4>
+                <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0; // Error တက်မည်
+        } catch (ArithmeticException e) {
+            System.out.println("Error: သုညဖြင့် စား၍မရပါ။");
+        }
+        System.out.println("Program ဆက်လက်အလုပ်လုပ်နေသည်။");
+    }
+}
+                </code></pre>
+            </div>
+
+            <h2>၃။ Finally Block</h2>
+            <p><code>finally</code> block အတွင်းရှိ Code များသည် Error တက်သည်ဖြစ်စေ၊ မတက်သည်ဖြစ်စေ **အမြဲတမ်း
+                အလုပ်လုပ်မည်** ဖြစ်သည်။ ပုံမှန်အားဖြင့် ဖိုင်များပိတ်ခြင်း သို့မဟုတ် Connection များကို
+                ပြန်ဖြုတ်ခြင်းအတွက် သုံးသည်။</p>
+
+            <div class="code-example">
+                <h4>Finally ဥပမာ</h4>
+                <pre><code>
+try {
+    // some code
+} catch (Exception e) {
+    // handle error
+} finally {
+    System.out.println("ဤနေရာသည် အမြဲတမ်း အလုပ်လုပ်သည်။");
+}
+                </code></pre>
+            </div>
+
+            <blockquote class="tip">
+                **မှတ်သားရန်:** `try` တစ်ခုအတွက် `catch` သို့မဟုတ် `finally` တစ်ခုခုသည် မဖြစ်မနေ ပါဝင်ရမည်။ `try`
+                တစ်ခုတည်း သီးသန့် ရေး၍မရပါ။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer id="main-footer"></footer>
+</body>
+
+</html>

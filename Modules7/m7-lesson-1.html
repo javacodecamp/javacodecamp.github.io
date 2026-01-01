@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7.1: String Immutability & Methods</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module7">← Module 7: String သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 7.1: String Immutability နှင့် String Methods</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 25 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Java String ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Java တွင် String ဆိုသည်မှာ စာလုံး (Characters) များ စုစည်းထားသော <strong>Object</strong> တစ်ခု ဖြစ်သည်။
+                ၎င်းကို <code>" "</code> (Double Quotes) ဖြင့် ရေးသားရသည်။</p>
+
+            <h2>၂။ String Immutability (ပြောင်းလဲ၍မရသော သဘာဝ)</h2>
+            <p>Java တွင် String Object တစ်ခုကို ဖန်တီးပြီးပါက ၎င်း၏ တန်ဖိုးကို **ထပ်မံ ပြောင်းလဲ၍ မရပါ (Immutable)**။
+                စာသားတစ်ခုကို ပြင်လိုက်တိုင်း Java က ရှိပြီးသား String ကို မပြင်ဘဲ Memory ပေါ်တွင် String အသစ်တစ်ခုကိုသာ
+                ထပ်မံ ဖန်တီးပေးခြင်း ဖြစ်သည်။</p>
+
+
+
+            <div class="code-example">
+                <h4>Immutability ဥပမာ</h4>
+                <pre><code>
+String s = "Java";
+s.concat(" Code"); // s ကို Code နှင့် ပေါင်းသည်
+System.out.println(s); // Output က Java ပဲ ထွက်ပါလိမ့်မည်
+                </code></pre>
+                <p>*မှတ်ချက်: "Java Code" ဆိုတဲ့ အဖြေကို လိုချင်ရင် variable အသစ်ထဲမှာ ပြန်သိမ်းရပါမယ်။*</p>
+            </div>
+
+            <h2>၃။ အသုံးများသော String Methods များ</h2>
+            <p>String Object များတွင် စာသားများကို ကိုင်တွယ်ရန် အလွန်အသုံးဝင်သော Methods များ ပါဝင်သည်။</p>
+
+
+
+            <div class="code-example">
+                <h4>လက်တွေ့အသုံးပြုပုံ</h4>
+                <pre><code>
+String text = "Java Programming";
+
+System.out.println("အရှည်: " + text.length()); // 16
+System.out.println("အကြီးပြောင်းရန်: " + text.toUpperCase()); // JAVA PROGRAMMING
+System.out.println("Index 0 မှ စာလုံး: " + text.charAt(0)); // J
+System.out.println("စာသားဖြတ်ထုတ်ခြင်း: " + text.substring(0, 4)); // Java
+System.out.println("တူမတူ စစ်ဆေးခြင်း: " + text.equals("java")); // false (Case sensitive)
+                </code></pre>
+            </div>
+
+            <blockquote class="tip">
+                **သတိထားရန်:** String နှစ်ခုကို တူ/မတူ စစ်ဆေးသည့်အခါ <code>==</code> ကို မသုံးဘဲ <code>.equals()</code>
+                ကိုသာ အမြဲသုံးသင့်သည်။ <code>==</code> သည် Memory Address တူ/မတူကိုသာ စစ်ဆေးသောကြောင့် ဖြစ်သည်။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer id="main-footer"></footer>
+</body>
+
+</html>

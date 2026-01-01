@@ -75,3 +75,27 @@ fadeElements.forEach(el => {
 //         button.textContent = "Read Less";
 //     }
 // }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // လက်ရှိ page က module folder ထဲမှာလား စစ်တယ်
+    const isModule = window.location.pathname.includes('/Modules');
+    const pathPrefix = isModule ? '../' : '';
+
+    const footerHTML = `
+        <div class="container text-center">
+            <p>&copy; 2025 Java Code Camp | All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="${pathPrefix}index.html">Home</a></li>
+                <li><a href="${pathPrefix}about.html">About Us</a></li>
+                <li><a href="${pathPrefix}contact.html">Contact Us</a></li>
+                <li><a href="${pathPrefix}privacy.html">Privacy Policy</a></li>
+                <li><a href="${pathPrefix}terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    `;
+    const footerElement = document.getElementById("main-footer");
+    if (footerElement) {
+        footerElement.innerHTML = footerHTML;
+    }
+});

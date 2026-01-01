@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10.3: java.util (ArrayList & Scanner)</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module10">← Module 10: Java API သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 10.3: java.util (ArrayList နှင့် Scanner)</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 25 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ ArrayList ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>သာမန် Array များသည် အရွယ်အစား အသေ (Fixed size) ဖြစ်သော်လည်း <code>ArrayList</code> သည် လိုအပ်သလို
+                တိုးနိုင်၊ လျှော့နိုင်သော **Dynamic Array** ဖြစ်သည်။ ၎င်းကို အသုံးပြုရန်
+                <code>java.util.ArrayList</code> ကို import လုပ်ရန် လိုအပ်သည်။</p>
+
+
+
+            <div class="code-example">
+                <h4>ArrayList အသုံးပြုပုံ ဥပမာ</h4>
+                <pre><code>
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // ArrayList တစ်ခု တည်ဆောက်ခြင်း (String သီးသန့်)
+        ArrayList<String> fruits = new ArrayList<>();
+
+        // ၁။ add() - အချက်အလက် ထည့်ခြင်း
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Mango");
+
+        // ၂။ get() - Index ဖြင့် ပြန်ယူခြင်း
+        System.out.println("ပထမဆုံးသီးနှံ: " + fruits.get(0));
+
+        // ၃။ remove() - ဖျက်ထုတ်ခြင်း
+        fruits.remove(1); // Banana ကို ဖျက်မည်
+
+        // ၄။ size() - အရေအတွက် စစ်ခြင်း
+        System.out.println("စုစုပေါင်း: " + fruits.size());
+
+        // ၅။ Loop ပတ်၍ အကုန်ထုတ်ခြင်း
+        for (String f : fruits) {
+            System.out.println(f);
+        }
+    }
+}
+                </code></pre>
+            </div>
+
+            <h2>၂။ Scanner Class (အသုံးပြုသူဆီမှ Input ယူခြင်း)</h2>
+            <p>Keyboard မှ ရိုက်ထည့်လိုက်သော အချက်အလက်များကို ဖတ်ယူရန် <code>Scanner</code> class ကို သုံးသည်။</p>
+
+
+
+            <div class="code-example">
+                <h4>Scanner အသုံးပြုပုံ ဥပမာ</h4>
+                <pre><code>
+import java.util.Scanner;
+
+public class UserInput {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("သင့်နာမည် ရိုက်ထည့်ပါ: ");
+        String name = sc.nextLine(); // စာသားဖတ်ခြင်း
+
+        System.out.print("သင့်အသက် ရိုက်ထည့်ပါ: ");
+        int age = sc.nextInt(); // ဂဏန်းဖတ်ခြင်း
+
+        System.out.println("မင်္ဂလာပါ " + name + "။ သင်သည် " + age + " နှစ်ရှိပါပြီ။");
+        
+        sc.close(); // အသုံးပြုပြီးပါက ပိတ်ပေးရန်
+    }
+}
+                </code></pre>
+            </div>
+
+            <blockquote class="tip">
+                **Pro Tip:** `ArrayList` မှာ primitive types (int, double, etc.) တွေကို တိုက်ရိုက် သိမ်းလို့မရပါဘူး။
+                အဲ့ဒီအစား Module 6 မှာ သင်ခဲ့တဲ့ Wrapper Classes (Integer, Double) တွေကို သုံးရပါတယ်။ ဥပမာ- `ArrayList
+                <Integer> numbers = new ArrayList<>();`
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer id="main-footer"></footer>
+</body>
+
+</html>

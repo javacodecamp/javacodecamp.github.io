@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6.1: Wrapper Classes</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://wallpapercave.com/wp/wp7420861.png" alt="Java Logo">
+            <h1>Java Code Camp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lessons.html" class="active">Lessons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-detail-header" class="container">
+            <p><a href="../lessons.html#module6">← Module 6: Wrapper Classes သို့ ပြန်သွားရန်</a></p>
+            <h1>Lesson 6.1: Wrapper Classes (Integer, Double, Character)</h1>
+            <p class="lesson-meta">ကြာမြင့်ချိန်: 15 မိနစ် | အဆင့်: အခြေခံ</p>
+        </section>
+
+        <section id="lesson-content" class="container">
+            <h2>၁။ Wrapper Class ဆိုသည်မှာ ဘာလဲ?</h2>
+            <p>Java တွင် Primitive Data Types (int, double, char, etc.) များသည် Object များ မဟုတ်ကြပါ။ သို့သော်
+                တစ်ခါတစ်ရံတွင် ၎င်းတို့ကို Object ကဲ့သို့ အသုံးပြုရန် လိုအပ်တတ်သည် (ဥပမာ- Collections များတွင်
+                သုံးသည့်အခါ)။ ထိုသို့ အသုံးပြုနိုင်ရန် Primitive တန်ဖိုးများကို Object အဖြစ် "ထုပ်ပိုး" ပေးထားသော Class
+                များကို <strong>Wrapper Classes</strong> ဟု ခေါ်သည်။</p>
+
+
+            <h2>၂။ အသုံးများသော Wrapper Classes များ</h2>
+            <div class="type-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Primitive Type</th>
+                            <th>Wrapper Class</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>byte</code></td>
+                            <td><code>Byte</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>short</code></td>
+                            <td><code>Short</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>int</code></td>
+                            <td><code>Integer</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>long</code></td>
+                            <td><code>Long</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>float</code></td>
+                            <td><code>Float</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>double</code></td>
+                            <td><code>Double</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>char</code></td>
+                            <td><code>Character</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>boolean</code></td>
+                            <td><code>Boolean</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>၃။ Wrapper Class ၏ အသုံးဝင်ပုံ</h2>
+            <p>Wrapper classes များသည် သာမန် Primitive types များထက် ပိုမိုစွမ်းဆောင်နိုင်သော Method များစွာ ပါဝင်သည်။
+                အသုံးအများဆုံးမှာ <strong>Parsing</strong> (စာသားကို ဂဏန်းပြောင်းခြင်း) ဖြစ်သည်။</p>
+
+            <div class="code-example">
+                <h4>Wrapper Class Method များ အသုံးပြုပုံ</h4>
+                <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        // ၁။ String ကို int ပြောင်းခြင်း
+        String s = "123";
+        int num = Integer.parseInt(s);
+        
+        // ၂။ Integer Object ဖန်တီးခြင်း
+        Integer myInt = 50; 
+        
+        // ၃။ Method များ အသုံးပြုခြင်း
+        System.out.println("ဂဏန်း: " + num);
+        System.out.println("Object အဖြစ်ပြောင်းလဲမှု: " + myInt.doubleValue());
+        System.out.println("စာလုံးဖြစ်သလား: " + Character.isLetter('A'));
+    }
+}
+                </code></pre>
+                <h4>Output ရလဒ်</h4>
+                <pre class="output">
+ဂဏန်း: 123
+Object အဖြစ်ပြောင်းလဲမှု: 50.0
+စာလုံးဖြစ်သလား: true
+                </pre>
+            </div>
+
+            <blockquote class="tip">
+                **မှတ်ချက်:** Wrapper class အမည်များသည် Primitive type များနှင့် အတူတူပင် ဖြစ်သော်လည်း ရှေ့စာလုံးမှာ
+                **အကြီး (Uppercase)** ဖြစ်ရမည်ကို သတိပြုပါ။ (ဥပမာ- <code>int</code> သည် <code>Integer</code>၊
+                <code>char</code> သည် <code>Character</code> ဖြစ်သည်)။
+            </blockquote>
+        </section>
+    </main>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⬆️ Top</button>
+    <script src="../script.js"></script>
+    <footer id="main-footer"></footer>
+</body>
+
+</html>
